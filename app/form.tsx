@@ -1,6 +1,5 @@
 import Form from 'next/form'
 
- 
 export default function Page() {
   return (
     <Form action="/search">
@@ -12,11 +11,14 @@ export default function Page() {
       <input name="message"/> */}
 
       <>
-
+     
       <div className="container">
 
+        <div className='card'>
+          <div className='card-body'>
+
        <div className="col-md-7 col-lg-8">
-        <h4 className="mb-3">Adresse</h4>
+        <h4 className="mb-3">Kontaktformular</h4>
         <form className="needs-validation" noValidate>
           <div className="row g-3">
             <div className="col-sm-6">
@@ -63,6 +65,22 @@ export default function Page() {
                 Bitte gib hier eine gültige Email Adresse ein
               </div>
             </div>
+
+            <div className="col-12">
+              <label htmlFor="phonenumber" className="form-label">
+                Telefonnummer <span className="text-body-secondary"></span>
+              </label>
+              <input
+                type="phonenumber"
+                className="form-control"
+                id="phone"
+                required
+              />
+              <div className="invalid-feedback">
+                Bitte gib hier eine gültige Telefonnummer ein
+              </div>
+            </div>
+
             <div className="col-12">
               <label htmlFor="address" className="form-label">
                 Addresse
@@ -162,8 +180,8 @@ export default function Page() {
           </button>
         </form>
       </div>
-
-
+      </div>
+      </div>
       </div>
        
 </>   
