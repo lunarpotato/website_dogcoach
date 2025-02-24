@@ -1,8 +1,8 @@
-import { Montserrat, Montserrat_Alternates} from "next/font/google";
 import "./globals.css";
+import { Montserrat } from "next/font/google";
 
 // components
-import Navbar from './components/Navbar' 
+import Navbar from './components/Navbar/Navbar' 
 
 
 const montserrat = Montserrat({
@@ -11,6 +11,10 @@ const montserrat = Montserrat({
   
 });
 
+export const metadata = {
+  title: 'Tine Coaching',
+  description: 'Professionelles Hunde&Mensch Coaching'
+};
 
 export default function RootLayout({
   children,
@@ -19,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <body className={`${montserrat.variable}`}>
+      <body className={montserrat.className}>
         <Navbar/>
         {children}
       </body>

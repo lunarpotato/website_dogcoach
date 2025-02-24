@@ -3,17 +3,17 @@ import Form from 'next/form'
 
 export default function CreateForm() {
   return (
-    <Form action="/search">
+    <Form action="/search" >
       <>
-     
       <div className="container">
 
         <div className='card'>
           <div className='card-body'>
 
-       <div className="col-md-7 col-lg-8">
+       <div className="col-12">
         <h4 className="mb-3">Kontaktformular</h4>
-        <form className="needs-validation" noValidate>
+        
+        
           <div className="row g-3">
             <div className="col-sm-6">
               <label htmlFor="firstName" className="form-label">
@@ -52,7 +52,7 @@ export default function CreateForm() {
                 type="email"
                 className="form-control"
                 id="email"
-                placeholder="you@example.com"
+                placeholder="muster@beispiel.com"
                 required
               />
               <div className="invalid-feedback">
@@ -67,7 +67,8 @@ export default function CreateForm() {
               <input
                 type="phonenumber"
                 className="form-control"
-                id="phone"
+                id="phonenumber"
+                placeholder="000 000 00 00"
                 required
               />
               <div className="invalid-feedback">
@@ -95,7 +96,7 @@ export default function CreateForm() {
           <button className="btn btn-success rounded-pill px-3">
             Absenden
           </button>
-        </form>
+     
       </div>
         </div>
            </div>
