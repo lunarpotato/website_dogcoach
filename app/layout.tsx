@@ -13,7 +13,7 @@ const montserrat = Montserrat({
 
 export const metadata = {
   title: 'Tine Coaching',
-  description: 'Professionelles Hunde&Mensch Coaching'
+  description: 'Professionelles Hunde & Mensch Coaching'
 };
 
 export default function RootLayout({

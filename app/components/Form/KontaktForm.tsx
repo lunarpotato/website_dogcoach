@@ -11,7 +11,7 @@ export default function CreateForm() {
           <div className='card-body'>
 
        <div className="col-12">
-        <h4 className="mb-3">Kontaktformular</h4>
+        <h3>Kontaktformular</h3>
         
         
           <div className="row g-3">
