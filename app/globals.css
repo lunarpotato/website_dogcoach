@@ -1,2 +1,6 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
+body {
+    background: #8FB15C;
+}
+
