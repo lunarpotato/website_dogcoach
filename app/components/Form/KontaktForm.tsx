@@ -1,6 +1,8 @@
 "use client"
+
 import Form from 'next/form'
-import Style from '../components/Form/KontaktForm.module.css'
+import Style from '../components/Form/KontaktForm.module.scss'
+
 
 export default function CreateForm() {
   return (

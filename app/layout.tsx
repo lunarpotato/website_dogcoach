@@ -1,4 +1,4 @@
-import "./globals.css";
+import "./costum-bootstrap.scss";
 import { Montserrat } from "next/font/google";
 
 // components
