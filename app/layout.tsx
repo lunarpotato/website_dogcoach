@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 
 // components
 import Navbar from './components/Navbar/Navbar' 
+import ModeToggle from './components/Modetoggle/ModeToggle'
 
 
 const montserrat = Montserrat({
@@ -25,7 +26,9 @@ export default function RootLayout({
     <html lang="de">
       <body className={montserrat.className}>
         <Navbar/>
+        <ModeToggle/>
         {children}
+        
       </body>
     </html>
   );

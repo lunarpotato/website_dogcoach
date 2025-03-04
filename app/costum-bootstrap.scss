@@ -1,11 +1,7 @@
-$primary: #8FB15C;  // Eigene Hauptfarbe
-$secondary: #90739A;
+//$primary: #8FB15C;  // Eigene Hauptfarbe
+//$secondary: #90739A;
+
+// Include any default variable overrides here (though functions won't be available)
 
 
-
-
-
-@import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-
+@import 'node_modules/bootstrap/scss/bootstrap';

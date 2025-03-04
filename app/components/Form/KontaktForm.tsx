@@ -8,7 +8,7 @@ export default function CreateForm() {
   return (
     <Form action="/search" >
       <>
-      <div className="container">
+      <div className="container container_special">
 
         <div className='card'>
           <div className='card-body'>
