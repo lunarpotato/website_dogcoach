@@ -1,7 +1,9 @@
 export default function Home() {
     return (
       <main>
-      <h3>Landing Page</h3>
+        <div className="container">
+          <h3>Landing Page</h3>
+        </div>
       </main>
   
     );

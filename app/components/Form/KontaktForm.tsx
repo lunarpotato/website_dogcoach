@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 import Form from 'next/form'
 import Styles from './KontaktForm.module.css'
 
