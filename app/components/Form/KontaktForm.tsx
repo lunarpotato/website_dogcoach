@@ -14,13 +14,14 @@ export default function CreateForm() {
   });
 
   const [status, setStatus] = useState<string | null>(null);
-
+  const [isLoading, setIsLoading] = useState(false);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
 
     const response = await fetch("/api/sendMail", {
       method: "POST",
@@ -34,6 +35,7 @@ export default function CreateForm() {
     } else {
       setStatus("Fehler beim Senden der E-Mail.");
     }
+    setIsLoading(false);
   };
 
   return (
@@ -69,7 +71,7 @@ export default function CreateForm() {
                       type="text"
                       className="form-control"
                       id="lastName"
-                      name = "lastName"
+                      name="lastName"
                       value={formData.lastName}
                       onChange={handleChange}
                       placeholder=""
@@ -85,7 +87,7 @@ export default function CreateForm() {
                       type="email"
                       className="form-control"
                       id="email"
-                      name = "email"
+                      name="email"
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="muster@beispiel.com"
@@ -123,7 +125,7 @@ export default function CreateForm() {
                       type="nachricht"
                       className="form-control"
                       id="nachricht"
-                      name = "nachricht"
+                      name="nachricht"
                       value={formData.nachricht}
                       onChange={handleChange}
                       required
@@ -134,10 +136,27 @@ export default function CreateForm() {
                   </div>
                 </div>
                 <hr className="my-4" />
-                <button type="submit" className="btn btn-success rounded-pill px-3">
-                  Absenden
-                </button>
-                {status && <p className="mt-3">{status}</p>}
+
+                {/* Button mit Loading-Zustand */}
+                <button type="submit" className="btn btn-success rounded-pill px-3" disabled={isLoading}>
+                {isLoading ? (
+                  <>
+                    <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    {" "}Wird gesendet...
+                  </>
+                ) : (
+                  "Absenden"
+                )}
+              </button>
+              {/* Statusnachricht */}
+                {status && (
+                  <div
+                    className={`mt-3 p-3 border rounded ${status.includes("erfolgreich") ? "alert alert-success" : "alert alert-danger"
+                      }`}
+                    >
+                    {status}
+                  </div>
+                )}
               </div>
             </div>
           </div>
