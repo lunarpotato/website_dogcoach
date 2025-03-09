@@ -30,10 +30,10 @@ export default function CreateForm() {
     });
 
     if (response.ok) {
-      setStatus("E-Mail wurde erfolgreich gesendet!");
+      setStatus("Nachricht wurde erfolgreich gesendet!");
       setFormData({ firstName: "", lastName: "", email: "", telefonNummer: "", nachricht: "" });
     } else {
-      setStatus("Fehler beim Senden der E-Mail.");
+      setStatus("Fehler beim Senden der Nachricht.");
     }
     setIsLoading(false);
   };
