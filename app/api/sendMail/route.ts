@@ -3,23 +3,25 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   try {
-    const { firstName, lastName, email, phonenumber, textmessage } = await req.json();
+    const { firstName, lastName, email, telefonNummer, nachricht } = await req.json();
 
     // Erstelle einen Nodemailer-Transporter
     const transporter = nodemailer.createTransport({
-      service: "gmail", // Oder dein SMTP-Provider
+      service: "gmail",
+      host: "smtp.gmail.com",
+      secure: true,
       auth: {
-        user: process.env.EMAIL_USER, // Setze deine E-Mail-Adresse
-        pass: process.env.EMAIL_PASS, // Setze dein App-Passwort (kein normales Passwort)
+        user: process.env.EMAIL_USER, 
+        pass: process.env.EMAIL_PASS, 
       },
     });
 
     // E-Mail versenden
     await transporter.sendMail({
       from: `"Kontaktformular" <${process.env.EMAIL_USER}>`,
-      to: "webseitenbetreiber@email.com", // Empfänger-E-Mail
+      to: "danial.nowak@gmail.com", 
       subject: "Neue Nachricht vom Kontaktformular",
-      text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nTelefon: ${phonenumber}\nNachricht: ${textmessage}`,
+      text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nTelefon: ${telefonNummer}\nNachricht: ${nachricht}`,
     });
 
     return NextResponse.json({ message: "E-Mail erfolgreich gesendet!" }, { status: 200 });
