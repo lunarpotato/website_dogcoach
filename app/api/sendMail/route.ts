@@ -19,7 +19,7 @@ export async function POST(req: Request) {
     // E-Mail versenden
     await transporter.sendMail({
       from: `"Kontaktformular" <${process.env.EMAIL_USER}>`,
-      to: "danial.nowak@gmail.com", 
+      to: process.env.EMAIL_USER, 
       subject: "Neue Nachricht vom Kontaktformular",
       text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nTelefon: ${telefonNummer}\nNachricht: ${nachricht}`,
     });

@@ -2,6 +2,7 @@
 import Form from 'next/form'
 import Styles from './KontaktForm.module.css'
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 export default function CreateForm() {
 
@@ -12,7 +13,7 @@ export default function CreateForm() {
     telefonNummer: "",
     nachricht: "",
   });
-
+  const router = useRouter();
   const [status, setStatus] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -32,6 +33,10 @@ export default function CreateForm() {
     if (response.ok) {
       setStatus("Nachricht wurde erfolgreich gesendet!");
       setFormData({ firstName: "", lastName: "", email: "", telefonNummer: "", nachricht: "" });
+      setTimeout(() => {
+        router.push("/");
+      }, 5000);
+
     } else {
       setStatus("Fehler beim Senden der Nachricht.");
     }
