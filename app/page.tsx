@@ -1,6 +1,24 @@
+import Image from 'next/image'
+import dogHeaderimage from '../public/dogwithhuman.jpg'
+
 export default function Home() {
     return (
       <main>
+      
+       <div className="container position-relative">
+
+       <Image 
+          src={dogHeaderimage} 
+          style= {{
+            maxWidth: '100%',
+            height: 'auto',
+          }}
+          // height={} 
+          // blurDataURL="data:..." automatically provided
+          // placeholder="blur" // Optional blur-up while loading
+          alt="Picture of a human and a dog" 
+        />
+        
         <>
         <div className="container">
           <div className="hstack gap-3 align-items-stretch" style={{ height: "250px" }}>
@@ -16,7 +34,7 @@ export default function Home() {
         </div>
 
         </>
-
+      </div>
       </main>
   
     );

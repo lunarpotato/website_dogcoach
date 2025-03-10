@@ -4,7 +4,7 @@ import Style from './Navbar.module.css';
 export default function Navbar() {
     return (
           
-    <nav className={`navbar navbar-expand-lg  ${Style.nav_body}`}>
+    <nav className={`navbar navbar-expand-lg   ${Style.nav_body}`}>
         <div className="container-fluid">
 
             <div className="container d-flex justify-content-end">
