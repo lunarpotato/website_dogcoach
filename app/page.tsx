@@ -1,37 +1,193 @@
-import Image from 'next/image'
-import dogHeaderimage from '../public/img/dogwithhuman.jpg'
+import Image from "next/image";
+import dogHeaderimage from "../public/img/dogwithhuman.jpg";
 
 export default function Home() {
-    return (
-      <main>
-
-       <div className="container position-relative">
-
-       <Image 
-          src={dogHeaderimage} 
+  return (
+    <main>
+      <div className="container position-relative">
+        <Image
+          src={dogHeaderimage}
           placeholder="blur"
           quality={50}
-          className='img-fluid'
-          // height={} 
+          className="img-fluid"
+          // height={}
           // blurDataURL="data:..." automatically provided
-          alt="Picture of a human and a dog" 
+          alt="Picture of a human and a dog"
         />
-        
-          <div className="hstack gap-3 align-items-stretch position-absolute top-0 start-0 w-100 d-flex justify-content-between" style={{ height: "250px", opacity:"0.8" }}>
-            <div 
-            className="h-auto w-auto mw-25 p-5 bg-body-secondary border align-self-start" style={{ maxWidth: "350px"}}>
-              Weil Beziehung mehr ist als Erziehung.
-            </div>
-            
-            <div className=" ms-auto h-auto w-auto mw-25 p-5 bg-body-secondary border align-self-end" style={{ maxWidth: "350px", opacity:"0.8", wordBreak: "break-word"}}>
-              Individuelles Coaching für ein harmonisches Mensch-Hund-Team.
-            </div>
+
+        <div
+          className="hstack gap-3 align-items-stretch position-absolute top-0 start-0 w-100 d-flex justify-content-between"
+          style={{ height: "250px", opacity: "0.8" }}
+        >
+          <div
+            className="h-auto w-auto mw-25 p-5 bg-body-secondary border align-self-start"
+            style={{ maxWidth: "350px" }}
+          >
+            Weil Beziehung mehr ist als Erziehung.
           </div>
+
+          <div
+            className=" ms-auto h-auto w-auto mw-25 p-5 bg-body-secondary border align-self-end"
+            style={{
+              maxWidth: "350px",
+              opacity: "0.8",
+              wordBreak: "break-word",
+            }}
+          >
+            Individuelles Coaching für ein harmonisches Mensch-Hund-Team.
+          </div>
+        </div>
       </div>
 
-      
-      </main>
-  
-    );
-  }
-  
+      <div
+        id="myCarousel"
+        className="carousel slide mb-6 pointer-event"
+        data-bs-ride="carousel"
+      >
+        <div className="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="0"
+            className="active"
+            aria-label="Slide 1"
+            aria-current="true"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+            className=""
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+            className=""
+          ></button>
+        </div>
+        <div className="carousel-inner">
+          <div className="carousel-item carousel-item-next carousel-item-start">
+            <svg
+              className="bd-placeholder-img"
+              width="100%"
+              height="100%"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              ></rect>
+            </svg>
+            <div className="container">
+              <div className="carousel-caption text-start">
+                <h1>Example headline.</h1>
+                <p className="opacity-75">
+                  Some representative placeholder content for the first slide of
+                  the carousel.
+                </p>
+                <p>
+                  <a className="btn btn-lg btn-primary" href="#">
+                    Sign up today
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="carousel-item">
+            <svg
+              className="bd-placeholder-img"
+              width="100%"
+              height="100%"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              ></rect>
+            </svg>
+            <div className="container">
+              <div className="carousel-caption">
+                <h1>Another example headline.</h1>
+                <p>
+                  Some representative placeholder content for the second slide
+                  of the carousel.
+                </p>
+                <p>
+                  <a className="btn btn-lg btn-primary" href="#">
+                    Learn more
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="carousel-item active carousel-item-start">
+            <svg
+              className="bd-placeholder-img"
+              width="100%"
+              height="100%"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <rect
+                width="100%"
+                height="100%"
+                fill="var(--bs-secondary-color)"
+              ></rect>
+            </svg>
+            <div className="container">
+              <div className="carousel-caption text-end">
+                <h1>One more for good measure.</h1>
+                <p>
+                  Some representative placeholder content for the third slide of
+                  this carousel.
+                </p>
+                <p>
+                  <a className="btn btn-lg btn-primary" href="#">
+                    Browse gallery
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide="prev"
+        >
+          <span
+            className="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide="next"
+        >
+          <span
+            className="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div>
+    </main>
+  );
+}

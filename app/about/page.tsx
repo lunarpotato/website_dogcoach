@@ -12,8 +12,10 @@ export default function About() {
           // placeholder="blur"
           quality={50}
           className='img-fluid'
+          height= {500}
           width={500}
-          height={500}
+          
+          
 
           // height={} 
           // blurDataURL="data:..." automatically provided
