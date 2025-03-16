@@ -1,11 +1,14 @@
 "use client"
 import Form from 'next/form'
+import ReCAPTCHA from 'react-google-recaptcha'
 import Styles from './KontaktForm.module.css'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 
+///Komponente für das Kontakformular.
 export default function CreateForm() {
 
+  //Das Model für das Formular wird initialisiert.
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -13,26 +16,47 @@ export default function CreateForm() {
     telefonNummer: "",
     nachricht: "",
   });
+
+  // UseState Variablen werden initialisiert (Reagiert auf Zustandsänderungen).
   const router = useRouter();
   const [status, setStatus] = useState<string | null>(null);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  ///Führt den E-Mail Sendevorgang durch
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
 
+    //Ist das Captcha Token enthalten?
+    if (!captchaToken) {
+      setStatus("Bitte bestätigen Sie, dass Sie kein Roboter sind.");
+      setIsLoading(false);
+      return;
+    }
+
+    //Sendet die Daten des Formulars an die Api.
+
     const response = await fetch("/api/sendMail", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
+      body: JSON.stringify({ ...formData, captchaToken }),
     });
 
+
+    const responseData = await response.json();
+    console.log("Response Data: ", responseData);
+
+    //War das senden erfolgreich?
     if (response.ok) {
       setStatus("Nachricht wurde erfolgreich gesendet!");
       setFormData({ firstName: "", lastName: "", email: "", telefonNummer: "", nachricht: "" });
+
+      //Weiterleitung auf die Home-Seite nach 5 sekunden (5000ms).
       setTimeout(() => {
         router.push("/");
       }, 5000);
@@ -142,23 +166,28 @@ export default function CreateForm() {
                 </div>
                 <hr className="my-4" />
 
+                {/* Verwende die Google-reCAPTCHA Komponente. */}
+                <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+                  onChange={(token) => setCaptchaToken(token)}
+                />
+
                 {/* Button mit Loading-Zustand */}
                 <button type="submit" className="btn btn-success rounded-pill px-3" disabled={isLoading}>
-                {isLoading ? (
-                  <>
-                    <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                    {" "}Wird gesendet...
-                  </>
-                ) : (
-                  "Absenden"
-                )}
-              </button>
-              {/* Statusnachricht */}
+                  {isLoading ? (
+                    <>
+                      <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                      {" "}Wird gesendet...
+                    </>
+                  ) : (
+                    "Absenden"
+                  )}
+                </button>
+                {/* Statusnachricht */}
                 {status && (
                   <div
                     className={`mt-3 p-3 border rounded ${status.includes("erfolgreich") ? "alert alert-success" : "alert alert-danger"
                       }`}
-                    >
+                  >
                     {status}
                   </div>
                 )}
