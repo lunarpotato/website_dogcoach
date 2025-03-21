@@ -2,7 +2,7 @@
 import Form from 'next/form'
 import ReCAPTCHA from 'react-google-recaptcha'
 import Styles from './KontaktForm.module.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 
 ///Komponente für das Kontakformular.
@@ -22,6 +22,14 @@ export default function CreateForm() {
   const [status, setStatus] = useState<string | null>(null);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [timer, setTimer] = useState<number>(5);
+
+  useEffect(() => {
+    if (timer === 0) {
+      router.push("/"); // Weiterleitung nach 0 Sekunden
+    }
+  }, [timer, router]);
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -56,10 +64,16 @@ export default function CreateForm() {
       setStatus("Nachricht wurde erfolgreich gesendet!");
       setFormData({ firstName: "", lastName: "", email: "", telefonNummer: "", nachricht: "" });
 
-      //Weiterleitung auf die Home-Seite nach 5 sekunden (5000ms).
-      setTimeout(() => {
-        router.push("/");
-      }, 5000);
+      // Start Timer für Weiterleitung
+      const countdown = setInterval(() => {
+        setTimer((prevTimer) => {
+          if (prevTimer <= 1) {
+            clearInterval(countdown);
+            return 0; // Timer stoppen
+          }
+          return prevTimer - 1;
+        });
+      }, 1000); // Update alle 1 Sekunde
 
     } else {
       setStatus("Fehler beim Senden der Nachricht.");
@@ -88,6 +102,7 @@ export default function CreateForm() {
                       value={formData.firstName}
                       onChange={handleChange}
                       placeholder=""
+                      aria-label='Das Eingabefeld für den Vornamen'
                       required
                     />
                     <div className="invalid-feedback">Bitte gib hier deinen Vornamen ein</div>
@@ -104,6 +119,7 @@ export default function CreateForm() {
                       value={formData.lastName}
                       onChange={handleChange}
                       placeholder=""
+                      aria-label='Das Eingabefeld für den Nachnamen'
                       required
                     />
                     <div className="invalid-feedback">Bitte gib hier deinen Nachnamen ein</div>
@@ -120,9 +136,10 @@ export default function CreateForm() {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="muster@beispiel.com"
+                      aria-label='Das Eingabefeld für die E-Mail Adresse'
                       required
                     />
-                    <div className="invalid-feedback">
+                    <div className="invalid-feedback" aria-label='Bitte geben Sie eine gültige E-Mail Adresse ein'>
                       Bitte gib hier eine gültige Email Adresse ein
                     </div>
                   </div>
@@ -138,8 +155,8 @@ export default function CreateForm() {
                       name="telefonNummer"
                       value={formData.telefonNummer}
                       onChange={handleChange}
-                      placeholder="000 000 00 00"
-                      required
+                      placeholder="(Optional)"
+                      aria-label='Das Eingabefeld für die Telefonnummer. Diese Eingabe ist optional.'
                     />
                     <div className="invalid-feedback">
                       Bitte gib hier eine gültige Telefonnummer ein
@@ -157,6 +174,8 @@ export default function CreateForm() {
                       name="nachricht"
                       value={formData.nachricht}
                       onChange={handleChange}
+                      placeholder='Ihre Nachricht'
+                      aria-label='Das Eingabefeld für Ihre Nachricht.'
                       required
                     />
                     <div className="invalid-feedback">
@@ -167,12 +186,15 @@ export default function CreateForm() {
                 <hr className="my-4" />
 
                 {/* Verwende die Google-reCAPTCHA Komponente. */}
-                <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+                <ReCAPTCHA aria-label='Bestätigung, dass Sie kein Roboter sind'
+                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
                   onChange={(token) => setCaptchaToken(token)}
                 />
 
                 {/* Button mit Loading-Zustand */}
-                <button type="submit" className="btn btn-success rounded-pill px-3" disabled={isLoading}>
+                <button type="submit" className="btn btn-success rounded-pill px-3" disabled={isLoading}
+                  aria-label={isLoading ? "Nachricht wird gesendet" : "Formular absenden"}
+                >
                   {isLoading ? (
                     <>
                       <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
@@ -187,10 +209,20 @@ export default function CreateForm() {
                   <div
                     className={`mt-3 p-3 border rounded ${status.includes("erfolgreich") ? "alert alert-success" : "alert alert-danger"
                       }`}
+                    role="alert"
+                    aria-live="polite"
                   >
                     {status}
                   </div>
                 )}
+
+                {/* Timer für Weiterleitung */}
+                {status === "Nachricht wurde erfolgreich gesendet!" && (
+                  <div className="mt-3">
+                    Weiterleitung auf die Hauptseite in <strong>{timer}</strong> Sekunde{timer !== 1 ? "n" : ""}...
+                  </div>
+                )}
+
               </div>
             </div>
           </div>
