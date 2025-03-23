@@ -54,6 +54,10 @@
   transition: var(--bs-navbar-toggler-transition);
 }
 
+.navbar-toggler:hover {
+  background-color: #00000034;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .navbar-toggler {
     transition: none;
