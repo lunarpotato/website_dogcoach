@@ -52,8 +52,8 @@ export default function Navbar() {
                 <span className="navbar-toggler-icon"></span>
                 </Dropdown.Toggle>
 
-                <Dropdown.Menu  style={{backgroundColor: "#bfd59ec4"}}>
-                <Dropdown.Item as={Link} href="/">Home</Dropdown.Item>
+                <Dropdown.Menu  className={Style['dropdown-menu']}>
+                <Dropdown.Item as={Link} href="/" className={Style['dropdown-item']}>Home</Dropdown.Item>
                 <Dropdown.Item as={Link} href="/about">About</Dropdown.Item>
                 <Dropdown.Item as={Link} href="/contact">Kontakt</Dropdown.Item>
                 </Dropdown.Menu>
