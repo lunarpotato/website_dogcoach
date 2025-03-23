@@ -17,7 +17,7 @@ export default function Navbar() {
       <div className="container-fluid">
 
         {/* Navbar-Toggler für Mobile-Version*/}
-        <div className="container d-flex justify-content-end btn-group dropstart">
+        <div className="container d-flex justify-content-center">
 
           {/* Hauptnavigation */}
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
