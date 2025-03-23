@@ -8,6 +8,12 @@ import DropdownItem from "react-bootstrap/DropdownItem";
 
 export default function Navbar() {
 
+//#region Titel für die Navigation
+ const startseite = "Startseite";
+ const aboutMe = "Über mich";
+ const contact = "Kontakt";
+//#endregion
+
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
@@ -24,19 +30,19 @@ export default function Navbar() {
             <ul className="nav me-auto mb-2 mb-lg-0">
               <li className="nav-link">
                 <Link className={Style["nav-link"]} href="/">
-                  Home
+                {startseite}
                 </Link>
               </li>
 
               <li className="nav-link">
                 <Link className={Style["nav-link"]} href="/about">
-                  About
+                  {aboutMe}
                 </Link>
               </li>
 
               <li className="nav-link">
-                <Link className={Style["nav-link"]} href="/contact">
-                  Kontakt
+                <Link className={Style["nav-link"]} href="/kontakt">
+                  {contact}
                 </Link>
               </li>
             </ul>
@@ -56,9 +62,9 @@ export default function Navbar() {
             </Dropdown.Toggle>
 
             <Dropdown.Menu className={Style['dropdown-menu']}>
-              <Dropdown.Item as={Link} href="/" className={Style['dropdown-item']}>Home</Dropdown.Item>
-              <Dropdown.Item as={Link} href="/about" className={Style['dropdown-item']}>About</Dropdown.Item>
-              <Dropdown.Item as={Link} href="/contact" className={Style['dropdown-item']}>Kontakt</Dropdown.Item>
+              <Dropdown.Item as={Link} href="/" className={Style['dropdown-item']}>{startseite}</Dropdown.Item>
+              <Dropdown.Item as={Link} href="/about" className={Style['dropdown-item']}>{aboutMe}</Dropdown.Item>
+              <Dropdown.Item as={Link} href="/contact" className={Style['dropdown-item']}>{contact}</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
 
