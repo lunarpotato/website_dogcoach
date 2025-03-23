@@ -36,15 +36,13 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
-          
-          {/* Dropdown-Menue*/}
-
-            <Dropdown className="dropend d-lg-none">
+            <Dropdown className='d-lg-none'>
                 <Dropdown.Toggle 
                     bsPrefix="toggle"
                     variant="" 
                     id="dropdown-basic"
-                    className="navbar-toggler"
+                    className={Style['navbar-toggler']}
+                    // className='navbar-toggler'
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup"
