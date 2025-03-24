@@ -4,3 +4,22 @@ body {
     background: #8FB15C;
 }
 
+.custom-text {
+    font-size: 14px;
+
+}
+
+.p-5 {
+    padding: 3rem !important;
+  }
+
+@media (max-width: 475px) {
+    .custom-text {
+        font-size: 12px;
+    }
+
+    .p-5 {
+        padding: 1.5em !important;
+    }
+
+}
