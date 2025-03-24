@@ -41,7 +41,7 @@ export default function Navbar() {
               </li>
 
               <li className="nav-link">
-                <Link className={Style["nav-link"]} href="/kontakt">
+                <Link className={Style["nav-link"]} href="/contact">
                   {contact}
                 </Link>
               </li>
