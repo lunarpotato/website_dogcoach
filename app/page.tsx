@@ -17,21 +17,25 @@ export default function Home() {
 
         <div
           className="hstack gap-3 align-items-stretch position-absolute top-0 start-0 w-100 d-flex justify-content-between"
-          style={{ height: "250px", opacity: "0.8" }}
+          style={{ height: "250px", opacity: "0.8"}}
         >
           <div
-            className="h-auto w-auto mw-25 p-5 bg-body-secondary border align-self-start"
-            style={{ maxWidth: "350px" }}
+            className="h-auto w-auto mw-25 p-5 align-self-start"
+            style={{ 
+              maxWidth: "350px", 
+              color: "#BFD59E",
+              backgroundColor: "#393939"}}
           >
             Weil Beziehung mehr ist als Erziehung.
           </div>
 
           <div
-            className=" ms-auto h-auto w-auto mw-25 p-5 bg-body-secondary border align-self-end"
+            className=" ms-auto h-auto w-auto mw-25 p-5 align-self-end"
             style={{
               maxWidth: "350px",
-              opacity: "0.8",
               wordBreak: "break-word",
+              color: "#BFD59E",
+              backgroundColor: "#393939",
             }}
           >
             Individuelles Coaching für ein harmonisches Mensch-Hund-Team.
