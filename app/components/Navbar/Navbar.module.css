@@ -86,7 +86,7 @@
   --bs-dropdown-padding-y: .5rem;
   --bs-dropdown-spacer: .125rem;
   --bs-dropdown-font-size: 1rem;
-  --bs-dropdown-color: var(--bs-body-color);
+  --bs-dropdown-color: #2D4A00;
   --bs-dropdown-bg: var(--bs-body-bg);
   --bs-dropdown-border-color: var(--bs-border-color-translucent);
   --bs-dropdown-border-radius: var(--bs-border-radius);
@@ -95,10 +95,10 @@
   --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
   --bs-dropdown-divider-margin-y: .5rem;
   --bs-dropdown-box-shadow: var(--bs-box-shadow);
-  --bs-dropdown-link-color: var(--bs-body-color);
-  --bs-dropdown-link-hover-color: var(--bs-body-color);
+  --bs-dropdown-link-color: #2D4A00;
+  --bs-dropdown-link-hover-color:#bfd59ec4;
   --bs-dropdown-link-hover-bg: #90739A;
-  --bs-dropdown-link-active-color: #90739A;
+  --bs-dropdown-link-active-color: #2D4A00;
   --bs-dropdown-link-active-bg: #90739A;
   --bs-dropdown-link-disabled-color: var(--bs-tertiary-color);
   --bs-dropdown-item-padding-x: 1rem;
