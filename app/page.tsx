@@ -67,7 +67,12 @@ export default function Home() {
           >
             Individuelles Coaching für ein harmonisches Mensch-Hund-Team.
           </div>
+         
         </div>
+        <div className='d-flex justify-content-center mt-3'>
+          <button className='btn btn-custom'>Kontakt aufnehmen</button>
+          </div>
+       
       </div>
 
       <SliderGallery/>
