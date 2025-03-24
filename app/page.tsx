@@ -2,27 +2,8 @@ import { Carousel, CarouselItem, CarouselCaption } from 'react-bootstrap';
 
 import Image from "next/image";
 import dogHeaderimage from "../public/img/dogwithhuman.jpg";
+import Slider from './components/SliderGallery/Slider';
 
-
-function SliderGallery() {
-
-  return (
-    <div className="Slider container">
-      <Carousel>
-        <CarouselItem>
-          <img className="d-block w-100" src= {'./img/dog_backpack.jpg'} alt="First slide" />  
-        </CarouselItem>
-        <CarouselItem>
-          <img className="d-block w-100" src= {'./img/running_dog.jpg'} alt="Second slide" />        
-        </CarouselItem>
-        <CarouselItem>
-          <img className="d-block w-100" src= {'./img/paws_hands.jpg'} alt="Third Slide" />        
-        </CarouselItem>
-      
-      </Carousel>
-    </div>
-  );
-}
 
 export default function Home() {
   return (
@@ -33,13 +14,14 @@ export default function Home() {
           placeholder="blur"
           quality={50}
           className="img-fluid"
+          style={{ height: "75%", maxHeight: "400px", objectFit: "cover"}}
           // height={}
           // blurDataURL="data:..." automatically provided
           alt="Picture of a human and a dog"
         />
 
         <div
-          className="container hstack gap-3 gap-sm-1 align-items-stretch position-absolute top-0 start-0 w-100 d-flex justify-content-between "
+          className="container hstack mt-3 gap-3 gap-sm-1 align-items-stretch position-absolute top-0 start-0 w-100 d-flex justify-content-between "
           style={{ height: "250px", opacity: "0.8", flexShrink: 1}}
         >
           <div
@@ -67,15 +49,16 @@ export default function Home() {
           >
             Individuelles Coaching für ein harmonisches Mensch-Hund-Team.
           </div>
-         
+
         </div>
+
         <div className='d-flex justify-content-center mt-3'>
           <button className='btn btn-custom'>Kontakt aufnehmen</button>
-          </div>
-       
+          </div>
+   
       </div>
 
-      <SliderGallery/>
+      <Slider/>
 
     </main>
   );
