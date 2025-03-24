@@ -3,7 +3,6 @@
 }
 
 .nav-link {
-    
     padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
     font-size: var(--bs-nav-link-font-size);
     font-weight: var(--bs-nav-link-font-weight);
@@ -102,7 +101,7 @@
   --bs-dropdown-link-active-bg: #90739A;
   --bs-dropdown-link-disabled-color: var(--bs-tertiary-color);
   --bs-dropdown-item-padding-x: 1rem;
-  --bs-dropdown-item-padding-y: .25rem;
+  --bs-dropdown-item-padding-y: 0.3rem;
   --bs-dropdown-header-color: #6c757d;
   --bs-dropdown-header-padding-x: 1rem;
   --bs-dropdown-header-padding-y: .5rem;
