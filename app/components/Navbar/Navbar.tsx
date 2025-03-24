@@ -10,6 +10,7 @@ export default function Navbar() {
 
 //#region Titel für die Navigation
  const startseite = "Startseite";
+ const leistungen = "Leistungen";
  const aboutMe = "Über mich";
  const contact = "Kontakt";
 //#endregion
@@ -31,6 +32,11 @@ export default function Navbar() {
               <li className="nav-link">
                 <Link className={Style["nav-link"]} href="/">
                 {startseite}
+                </Link>
+              </li>
+              <li className="nav-link">
+                <Link className={Style["nav-link"]} href="/leistungen">
+                {leistungen}
                 </Link>
               </li>
 
