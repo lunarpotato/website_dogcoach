@@ -69,6 +69,7 @@ export default function Navbar() {
 
             <Dropdown.Menu className={Style['dropdown-menu']}>
               <Dropdown.Item as={Link} href="/" className={Style['dropdown-item']}>{startseite}</Dropdown.Item>
+              <Dropdown.Item as={Link} href="/leistungen" className={Style['dropdown-item']}>{leistungen}</Dropdown.Item>
               <Dropdown.Item as={Link} href="/about" className={Style['dropdown-item']}>{aboutMe}</Dropdown.Item>
               <Dropdown.Item as={Link} href="/contact" className={Style['dropdown-item']}>{contact}</Dropdown.Item>
             </Dropdown.Menu>
