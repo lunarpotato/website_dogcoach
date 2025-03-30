@@ -41,4 +41,8 @@ body {
         padding: 1.5em !important;
     }
 
+    .btn-custom {
+        margin-top: 3rem;
+    }
+
 }
