@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel, CarouselItem } from "react-bootstrap";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Style from "../SliderGallery/Slider.module.css";
 
 export default function Slider() {
