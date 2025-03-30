@@ -21,7 +21,7 @@ export default function Slider() {
         </CarouselItem>
         <CarouselItem>
           <Image
-            src="/img/running_dog.jpg"
+            src="/img/forest_walk.jpg"
             alt="Second Slide"
             layout="responsive"
             width={_width}

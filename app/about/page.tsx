@@ -40,7 +40,7 @@ export default function About() {
 
         
         <Image 
-          src= "/img/forest_walk.jpg"
+          src= "/img/running_dog.jpg"
           // placeholder="blur"
           quality={50}
           className='img-fluid'
