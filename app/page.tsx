@@ -1,6 +1,6 @@
 import { Carousel, CarouselItem, CarouselCaption } from 'react-bootstrap';
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 import dogHeaderimage from "../public/img/dogwithhuman.jpg";
 import Slider from './components/SliderGallery/Slider';
 
