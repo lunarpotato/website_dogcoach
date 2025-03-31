@@ -29,11 +29,32 @@ export default function Navbar() {
           {/* Hauptnavigation */}
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul className="nav me-auto mb-2 mb-lg-0">
+            
+              <li className='nav-link'>
+                <img width={75} height={75} src="../img/Logo.svg" ></img>  
+              </li>
+              {/* <li className="nav-link">
+              <svg
+                className="featurette-image img-fluid mx-auto"
+                width={300}
+                height={300}
+                src="../img/Logo.svg"
+                role="img"
+                aria-label="Placeholder: 500x500"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+              >
+                <Link className= {Style["nav-link featurette-image img-fluid mx-auto"]} href="/">
+                {Logo}
+                </Link>
+              </li> */}
+
               <li className="nav-link">
                 <Link className={Style["nav-link"]} href="/">
                 {startseite}
                 </Link>
               </li>
+
               <li className="nav-link">
                 <Link className={Style["nav-link"]} href="/leistungen">
                 {leistungen}
