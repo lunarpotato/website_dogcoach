@@ -1,5 +1,5 @@
 import { Carousel, CarouselItem, CarouselCaption } from 'react-bootstrap';
-
+import Link from "next/link";
 import Image from "next/image";
 import dogHeaderimage from "../public/img/dogwithhuman.jpg";
 import Slider from './components/SliderGallery/Slider';
@@ -51,11 +51,11 @@ export default function Home() {
           </div>
 
         </div>
+        
+        <Link className= 'd-flex justify-content-center mt-3'href="/contact">
+           <button className='btn btn-custom'>Kontakt aufnehmen</button>
+        </Link>
 
-        <div className='d-flex justify-content-center mt-3'>
-          <button className='btn btn-custom'>Kontakt aufnehmen</button>
-          </div>
-   
       </div>
 
       <Slider/>
