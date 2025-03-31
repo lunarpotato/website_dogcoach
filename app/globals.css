@@ -24,9 +24,9 @@ body {
     --bs-btn-disabled-color: #2D4A00;
     --bs-btn-disabled-bg: #8fb15ca1;
     --bs-btn-disabled-border-color: #90739A;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-   
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  
 }
 
 .p-5 {

@@ -53,7 +53,10 @@ export default function Home() {
           </div>
 
         </div>
+
+        <div className='container d-flex justify-content-center'>
         <Button _url='/contact' _type='button' _className='btn btn-custom' />
+        </div>
       </div>
 
       <Slider />
