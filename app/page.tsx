@@ -15,7 +15,7 @@ export default function Home() {
           placeholder="blur"
           quality={50}
           className="img-fluid"
-          style={{ height: "75%", maxHeight: "400px", objectFit: "cover"}}
+          style={{ height: "75%", maxHeight: "400px", objectFit: "cover" }}
           // height={}
           // blurDataURL="data:..." automatically provided
           alt="Picture of a human and a dog"
@@ -23,16 +23,17 @@ export default function Home() {
 
         <div
           className="container hstack mt-3 gap-3 gap-sm-1 align-items-stretch position-absolute top-0 start-0 w-100 d-flex justify-content-between "
-          style={{ height: "250px", opacity: "0.8", flexShrink: 1}}
+          style={{ height: "250px", opacity: "0.8", flexShrink: 1 }}
         >
           <div
             className="h-auto w-auto mw-25 p-5 align-self-start"
-            style={{ 
-              maxWidth: "350px", 
+            style={{
+              maxWidth: "350px",
               maxHeight: "200px",
               flexShrink: 1,
               color: "#BFD59E",
-              backgroundColor: "#393939"}}
+              backgroundColor: "#393939"
+            }}
           >
             Weil Beziehung mehr ist als Erziehung.
           </div>
@@ -52,15 +53,10 @@ export default function Home() {
           </div>
 
         </div>
-        
-          <Button _url='/contact' _type='button' _className='btn btn-custom'/>
-
-       
-        
-
+        <Button _url='/contact' _type='button' _className='btn btn-custom' />
       </div>
 
-      <Slider/>
+      <Slider />
 
     </main>
   );
