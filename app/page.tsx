@@ -1,15 +1,11 @@
-"use client"
-
 import { Carousel, CarouselItem, CarouselCaption } from 'react-bootstrap';
 import Link from "next/link";
 import Image from "next/image";
 import dogHeaderimage from "../public/img/dogwithhuman.jpg";
 import Slider from './components/SliderGallery/Slider';
-import { useRouter } from 'next/navigation';
-
+import Button from "./components/Button/Button"
 
 export default function Home() {
-  const router= useRouter();
 
   return (
     <main>
@@ -57,9 +53,9 @@ export default function Home() {
 
         </div>
         
+          <Button _url='/contact' _type='button' _className='btn btn-custom'/>
 
-        
-           <button type="button" onClick={() => router.push('/contact')} className='btn btn-custom'>Kontakt aufnehmen</button>
+       
         
 
       </div>
