@@ -1,11 +1,16 @@
+"use client"
+
 import { Carousel, CarouselItem, CarouselCaption } from 'react-bootstrap';
 import Link from "next/link";
 import Image from "next/image";
 import dogHeaderimage from "../public/img/dogwithhuman.jpg";
 import Slider from './components/SliderGallery/Slider';
+import { useRouter } from 'next/navigation';
 
 
 export default function Home() {
+  const router= useRouter();
+
   return (
     <main>
       <div className="container position-relative">
@@ -52,9 +57,10 @@ export default function Home() {
 
         </div>
         
-        <Link className= 'd-flex justify-content-center mt-3'href="/contact">
-           <button className='btn btn-custom'>Kontakt aufnehmen</button>
-        </Link>
+
+        
+           <button type="button" onClick={() => router.push('/contact')} className='btn btn-custom'>Kontakt aufnehmen</button>
+        
 
       </div>
 
