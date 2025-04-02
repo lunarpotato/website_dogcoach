@@ -59,7 +59,11 @@ export default function Home() {
         </div>
       </div>
 
+      <div className='container container-custom'>
+
       <Slider />
+
+      </div>
 
     </main>
   );

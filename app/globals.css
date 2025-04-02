@@ -4,6 +4,12 @@ body {
     background: #8FB15C;
 }
 
+.container-custom {
+    background-color: #393939bd;
+    padding: 0;
+  }
+ 
+  
 .custom-text {
     font-size: 14px;
 

@@ -7,6 +7,10 @@
     margin-right: auto;
     margin-left: auto;
   }
+
+  .container-custom {
+    background-color: #393939;
+  }
   
   @media (width >= 576px) {
     .container, .container-sm {
