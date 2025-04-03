@@ -12,8 +12,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: 'Tine Coaching',
-  description: 'Professionelles Hunde & Mensch Coaching'
+  title: 'Team Mensch-Hund',
+  description: 'Professionelles Mensch & Hunde Coaching'
 };
 
 export default function RootLayout({
