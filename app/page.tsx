@@ -65,12 +65,6 @@ export default function Home() {
 
       </div>
 
-      <nav className="navbar navbar-expand-lg sticky-bottom position-relative"> 
-      <div className="container-fluid">
-        Hier ist der Footer
-      </div>
-      </nav>
-
     </main>
   );
 }
