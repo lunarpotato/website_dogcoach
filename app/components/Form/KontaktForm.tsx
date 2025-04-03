@@ -167,9 +167,9 @@ export default function CreateForm() {
                     <label htmlFor="nachricht" className="form-label">
                       Nachricht <span className="text-body-secondary"></span>
                     </label>
-                    <input
-                      type="nachricht"
+                    <textarea                      
                       className="form-control"
+                      rows={3}
                       id="nachricht"
                       name="nachricht"
                       value={formData.nachricht}
