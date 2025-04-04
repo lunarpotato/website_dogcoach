@@ -43,12 +43,10 @@
 }
 
 .logo {
-  aspect-ratio: 5/2;
   padding-left: 0;
   margin-right: 2.5em;
   cursor: pointer;
   transition: transform .5s;
-
 }
 
 .logo:hover {

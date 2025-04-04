@@ -5,6 +5,7 @@ import Style from "./Navbar.module.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownMenu from "react-bootstrap/DropdownMenu";
 import DropdownItem from "react-bootstrap/DropdownItem";
+import Logo from '../Logo/Logo';
 
 export default function Navbar() {
 
@@ -29,11 +30,10 @@ export default function Navbar() {
           {/* Hauptnavigation */}
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul className="nav me-auto mb-2 mb-lg-0">
-            
-              <li className= {Style["logo"]}>
-                <img width={75} height={75} src="../img/Logo.svg" ></img>  
+          
+              <li>
+                <Logo _url='/' _className="logo" _src='../img/Logo.svg' />
               </li>
-             
 
               <li className="nav-link">
                 <Link className={Style["nav-link"]} href="/">
