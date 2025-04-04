@@ -32,7 +32,7 @@ export default function Navbar() {
             <ul className="nav me-auto mb-2 mb-lg-0">
           
               <li>
-                <Logo _url='/' _className="logo" _src='../img/Logo.svg' />
+                <Logo _url='/' _className={Style["logo"]} _src='../img/Logo.svg' />
               </li>
 
               <li className="nav-link">
