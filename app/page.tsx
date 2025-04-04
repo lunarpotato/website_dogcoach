@@ -32,7 +32,7 @@ export default function Home() {
               maxHeight: "200px",
               flexShrink: 1,
               color: "#BFD59E",
-              backgroundColor: "#393939"
+              backgroundColor: "#393939",
             }}
           >
             Weil Beziehung mehr ist als Erziehung.

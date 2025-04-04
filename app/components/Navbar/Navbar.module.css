@@ -42,6 +42,19 @@
   transform-origin: bottom left;
 }
 
+.logo {
+  aspect-ratio: 5/2;
+  padding-left: 0;
+  margin-right: 2.5em;
+  cursor: pointer;
+  transition: transform .5s;
+
+}
+
+.logo:hover {
+  transform: scale(1.03);
+}
+
 .navbar-toggler {
   padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
   font-size: var(--bs-navbar-toggler-font-size);
