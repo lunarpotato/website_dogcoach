@@ -1,13 +1,12 @@
-"use client"
-import Form from 'next/form'
-import ReCAPTCHA from 'react-google-recaptcha'
-import Styles from './KontaktForm.module.css'
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
+"use client";
+import Form from "next/form";
+import ReCAPTCHA from "react-google-recaptcha";
+import Styles from "./KontaktForm.module.css";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 ///Komponente für das Kontakformular.
 export default function CreateForm() {
-
   //Das Model für das Formular wird initialisiert.
   const [formData, setFormData] = useState({
     firstName: "",
@@ -30,8 +29,9 @@ export default function CreateForm() {
     }
   }, [timer, router]);
 
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -55,14 +55,19 @@ export default function CreateForm() {
       body: JSON.stringify({ ...formData, captchaToken }),
     });
 
-
     const responseData = await response.json();
     console.log("Response Data: ", responseData);
 
     //War das senden erfolgreich?
     if (response.ok) {
       setStatus("Nachricht wurde erfolgreich gesendet!");
-      setFormData({ firstName: "", lastName: "", email: "", telefonNummer: "", nachricht: "" });
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        telefonNummer: "",
+        nachricht: "",
+      });
 
       // Start Timer für Weiterleitung
       const countdown = setInterval(() => {
@@ -74,7 +79,6 @@ export default function CreateForm() {
           return prevTimer - 1;
         });
       }, 1000); // Update alle 1 Sekunde
-
     } else {
       setStatus("Fehler beim Senden der Nachricht.");
     }
@@ -82,11 +86,11 @@ export default function CreateForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} >
+    <form onSubmit={handleSubmit}>
       <>
         <div className="container">
-          <div className='card'>
-            <div className='card-body'>
+          <div className="card">
+            <div className="card-body">
               <div className="col-12">
                 <h3>Kontakt aufnehmen</h3>
                 <div className="row g-3">
@@ -102,10 +106,12 @@ export default function CreateForm() {
                       value={formData.firstName}
                       onChange={handleChange}
                       placeholder=""
-                      aria-label='Das Eingabefeld für den Vornamen'
+                      aria-label="Das Eingabefeld für den Vornamen"
                       required
                     />
-                    <div className="invalid-feedback">Bitte gib hier deinen Vornamen ein</div>
+                    <div className="invalid-feedback">
+                      Bitte gib hier deinen Vornamen ein
+                    </div>
                   </div>
                   <div className="col-sm-6">
                     <label htmlFor="lastName" className="form-label">
@@ -119,10 +125,12 @@ export default function CreateForm() {
                       value={formData.lastName}
                       onChange={handleChange}
                       placeholder=""
-                      aria-label='Das Eingabefeld für den Nachnamen'
+                      aria-label="Das Eingabefeld für den Nachnamen"
                       required
                     />
-                    <div className="invalid-feedback">Bitte gib hier deinen Nachnamen ein</div>
+                    <div className="invalid-feedback">
+                      Bitte gib hier deinen Nachnamen ein
+                    </div>
                   </div>
                   <div className="col-sm-6">
                     <label htmlFor="email" className="form-label">
@@ -136,17 +144,21 @@ export default function CreateForm() {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="muster@beispiel.com"
-                      aria-label='Das Eingabefeld für die E-Mail Adresse'
+                      aria-label="Das Eingabefeld für die E-Mail Adresse"
                       required
                     />
-                    <div className="invalid-feedback" aria-label='Bitte geben Sie eine gültige E-Mail Adresse ein'>
+                    <div
+                      className="invalid-feedback"
+                      aria-label="Bitte geben Sie eine gültige E-Mail Adresse ein"
+                    >
                       Bitte gib hier eine gültige Email Adresse ein
                     </div>
                   </div>
 
                   <div className="col-sm-6">
                     <label htmlFor="telefonNummer" className="form-label">
-                      Telefonnummer <span className="text-body-secondary"></span>
+                      Telefonnummer{" "}
+                      <span className="text-body-secondary"></span>
                     </label>
                     <input
                       type="telefonNummer"
@@ -156,7 +168,7 @@ export default function CreateForm() {
                       value={formData.telefonNummer}
                       onChange={handleChange}
                       placeholder="(Optional)"
-                      aria-label='Das Eingabefeld für die Telefonnummer. Diese Eingabe ist optional.'
+                      aria-label="Das Eingabefeld für die Telefonnummer. Diese Eingabe ist optional."
                     />
                     <div className="invalid-feedback">
                       Bitte gib hier eine gültige Telefonnummer ein
@@ -167,15 +179,15 @@ export default function CreateForm() {
                     <label htmlFor="nachricht" className="form-label">
                       Nachricht <span className="text-body-secondary"></span>
                     </label>
-                    <textarea                      
+                    <textarea
                       className="form-control"
                       rows={3}
                       id="nachricht"
                       name="nachricht"
                       value={formData.nachricht}
                       onChange={handleChange}
-                      placeholder='Ihre Nachricht'
-                      aria-label='Das Eingabefeld für Ihre Nachricht.'
+                      placeholder="Ihre Nachricht"
+                      aria-label="Das Eingabefeld für Ihre Nachricht."
                       required
                     />
                     <div className="invalid-feedback">
@@ -186,19 +198,29 @@ export default function CreateForm() {
                 <hr className="my-4" />
 
                 {/* Verwende die Google-reCAPTCHA Komponente. */}
-                <ReCAPTCHA aria-label='Bestätigung, dass Sie kein Roboter sind'
+                <ReCAPTCHA
+                  aria-label="Bestätigung, dass Sie kein Roboter sind"
                   sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
                   onChange={(token) => setCaptchaToken(token)}
                 />
 
                 {/* Button mit Loading-Zustand */}
-                <button type="submit" className="btn btn-success rounded-pill px-3" disabled={isLoading}
-                  aria-label={isLoading ? "Nachricht wird gesendet" : "Formular absenden"}
+                <button
+                  type="submit"
+                  className="btn btn-success rounded-pill px-3"
+                  disabled={isLoading}
+                  aria-label={
+                    isLoading ? "Nachricht wird gesendet" : "Formular absenden"
+                  }
                 >
                   {isLoading ? (
                     <>
-                      <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                      {" "}Wird gesendet...
+                      <span
+                        className="spinner-border spinner-border-sm"
+                        role="status"
+                        aria-hidden="true"
+                      ></span>{" "}
+                      Wird gesendet...
                     </>
                   ) : (
                     "Absenden"
@@ -207,8 +229,11 @@ export default function CreateForm() {
                 {/* Statusnachricht */}
                 {status && (
                   <div
-                    className={`mt-3 p-3 border rounded ${status.includes("erfolgreich") ? "alert alert-success" : "alert alert-danger"
-                      }`}
+                    className={`mt-3 p-3 border rounded ${
+                      status.includes("erfolgreich")
+                        ? "alert alert-success"
+                        : "alert alert-danger"
+                    }`}
                     role="alert"
                     aria-live="polite"
                   >
@@ -219,10 +244,10 @@ export default function CreateForm() {
                 {/* Timer für Weiterleitung */}
                 {status === "Nachricht wurde erfolgreich gesendet!" && (
                   <div className="mt-3">
-                    Weiterleitung auf die Hauptseite in <strong>{timer}</strong> Sekunde{timer !== 1 ? "n" : ""}...
+                    Weiterleitung auf die Hauptseite in <strong>{timer}</strong>{" "}
+                    Sekunde{timer !== 1 ? "n" : ""}...
                   </div>
                 )}
-
               </div>
             </div>
           </div>

@@ -3,6 +3,17 @@
 import { useRouter } from "next/navigation";
 import React from "react";
 
+/**
+ * Renders the Logo component.
+ *
+ * @param _url  The URL to navigate to on click.
+ * @param _className  Additional class names.
+ * @param _src  Source path for the image.
+ * @param _width  Width of the logo (optional).
+ * @param _height  Height of the logo (optional).
+ * @param _alt  Alternative text for the image.
+ * @returns Returns an img-html tag
+ */
 export default function Logo({
   _url,
   _className = "",

@@ -3,7 +3,14 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   try {
-    const { firstName, lastName, email, telefonNummer, nachricht, captchaToken } = await req.json();
+    const {
+      firstName,
+      lastName,
+      email,
+      telefonNummer,
+      nachricht,
+      captchaToken,
+    } = await req.json();
 
     // reCAPTCHA-Token wird geprüft.
     const secretKey = process.env.RECAPTCHA_SECRET_KEY;
@@ -13,7 +20,10 @@ export async function POST(req: Request) {
     const captchaData = await captchaRes.json();
 
     if (!captchaData.success) {
-      return NextResponse.json({ message: "reCAPTCHA-Überprüfung fehlgeschlagen!" }, { status: 400 });
+      return NextResponse.json(
+        { message: "reCAPTCHA-Überprüfung fehlgeschlagen!" },
+        { status: 400 }
+      );
     }
 
     // Erstelle einen Nodemailer-Transporter
@@ -35,9 +45,15 @@ export async function POST(req: Request) {
       text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nTelefon: ${telefonNummer}\nNachricht: ${nachricht}`,
     });
 
-    return NextResponse.json({ message: "E-Mail erfolgreich gesendet!" }, { status: 200 });
+    return NextResponse.json(
+      { message: "E-Mail erfolgreich gesendet!" },
+      { status: 200 }
+    );
   } catch (error) {
     console.error("Fehler beim Senden der E-Mail:", error);
-    return NextResponse.json({ message: "Fehler beim Senden der E-Mail" }, { status: 500 });
+    return NextResponse.json(
+      { message: "Fehler beim Senden der E-Mail" },
+      { status: 500 }
+    );
   }
 }
