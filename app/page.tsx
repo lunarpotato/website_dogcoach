@@ -1,5 +1,3 @@
-import { Carousel, CarouselItem, CarouselCaption } from 'react-bootstrap';
-import Link from "next/link";
 import Image from "next/image";
 import dogHeaderimage from "../public/img/dogwithhuman.jpg";
 import Slider from './components/SliderGallery/Slider';
@@ -19,6 +17,7 @@ export default function Home() {
           // height={}
           // blurDataURL="data:..." automatically provided
           alt="Picture of a human and a dog"
+          
         />
 
         <div
@@ -58,11 +57,9 @@ export default function Home() {
         <Button _url='/contact' _type='button' _className='btn btn-custom' />
         </div>
       </div>
-
-      <div className='container container-custom'>
-
-      <Slider />
-
+   
+      <div className='container'>
+        <Slider />
       </div>
 
     </main>
