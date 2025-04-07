@@ -9,13 +9,17 @@
     padding-top: 2rem;
   }
 
-  .container-custom {
-    background-color: #393939;
+
+  .custom {
+    background-color: #39393960;
+    padding: 0;
+    position: relative;
+
   }
-  
+
   @media (width >= 576px) {
     .container, .container-sm {
-      max-width: 540px;
+      max-width: 100%;
     }
   }
   
@@ -34,6 +38,7 @@
   @media (width >= 1200px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl {
       max-width: 1140px;
+      padding: 2rem;
     }
   }
   

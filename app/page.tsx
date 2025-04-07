@@ -38,7 +38,7 @@ export default function Home() {
           </div>
 
           <div
-            className=" ms-auto h-auto w-auto mw-25 p-5 align-self-end"
+            className="ms-auto h-auto w-auto mw-25 p-5 align-self-end"
             style={{
               maxWidth: "350px",
               maxHeight: "200px",
