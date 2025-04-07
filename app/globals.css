@@ -1,7 +1,11 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 body {
-    background: #8FB15C;
+    min-height:100%;
+    height:auto !important;
+    height:100%;
+    background: linear-gradient(#8FB15C, #90739A);
+  
 }
 
 .footer_body {
@@ -9,15 +13,33 @@ body {
 }
 
 .container-custom {
-    background-color: #393939bd;
-    padding: 0;
+    background-color: #39393987;
+
   }
- 
+
+.custom-heading {
+    color: #8FB15C;
+    padding-top: 2em;
+    padding-left: 0.25em;
+    letter-spacing: 0.15em;
+    font-weight: 250 !important;
+} 
   
+
+.lead-text {
+    color: #bfd59ec4;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 0.5em;
+    letter-spacing: 0.05em;
+
+}
+
 .custom-text {
     font-size: 14px;
 
 }
+
 
 .btn-custom {
     --bs-btn-color: #2D4A00;
@@ -28,7 +50,7 @@ body {
     --bs-btn-hover-border-color: #90739A;
     --bs-btn-focus-shadow-rgb: 66, 70, 73;
     --bs-btn-active-color:  #bfd59ec4;
-    --bs-btn-active-bg: #90739A4;
+    --bs-btn-active-bg: #90739A;
     --bs-btn-active-border-color: #90739A;
     --bs-btn-active-shadow: inset 0 3px 5px #00000020;
     --bs-btn-disabled-color: #2D4A00;
