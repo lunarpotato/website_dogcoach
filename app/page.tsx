@@ -1,10 +1,10 @@
 import Image from "next/image";
 import dogHeaderimage from "../public/img/dogwithhuman.jpg";
-import Slider from './components/SliderGallery/Slider';
-import Button from "./components/Button/Button"
+import Slider from "./components/SliderGallery/Slider";
+import Button from "./components/Button/Button";
+import Style from "./page.module.css";
 
 export default function Home() {
-
   return (
     <main>
       <div className="container position-relative">
@@ -13,11 +13,11 @@ export default function Home() {
           placeholder="blur"
           quality={50}
           className="img-fluid"
-          style={{ height: "75%", maxHeight: "400px", objectFit: "cover" }}
-          // height={}
-          // blurDataURL="data:..." automatically provided
+          style={{
+            height: "clamp(150px, 50vh, 400px)",
+            objectFit: "cover",
+          }}
           alt="Picture of a human and a dog"
-          
         />
 
         <div
@@ -50,18 +50,16 @@ export default function Home() {
           >
             Individuelles Coaching für ein harmonisches Mensch-Hund-Team.
           </div>
-
         </div>
 
-        <div className='container d-flex justify-content-center'>
-        <Button _url='/contact' _type='button' _className='btn btn-custom' />
+        <div className="container d-flex justify-content-center">
+          <Button _url="/contact" _type="button" _className="btn btn-custom" />
         </div>
       </div>
-   
-      <div className='container'>
+
+      <div className="container">
         <Slider />
       </div>
-
     </main>
   );
 }

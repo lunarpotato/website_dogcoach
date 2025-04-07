@@ -1,0 +1,4 @@
+.image {
+  height: clamp(150px, 40vw, 400px);
+  object-fit: cover;
+}
