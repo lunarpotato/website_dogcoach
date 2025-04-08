@@ -9,14 +9,17 @@ const images = [
   {
     src: "/img/dog_backpack.jpg",
     caption: "Caption Text",
+    loading: "lazy",
   },
   {
     src: "/img/forest_walk.jpg",
     caption: "Caption Two",
+    loading: "lazy",
   },
   {
     src: "/img/paws_hands.jpg",
     caption: "Caption Three",
+    loading: "lazy",
   },
 ];
 
