@@ -2,7 +2,7 @@ import { relative } from "path";
 
 export default function Leistungen() {
   return (
-    <main>
+    <main style={{ minHeight: "100vh", backgroundColor: "#39393987" }}>
       <div
         className="container container-custom"
         style={{ position: "relative" }}
