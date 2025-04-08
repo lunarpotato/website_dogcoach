@@ -1,6 +1,3 @@
-"use client"
-import Image from "next/image"
-import logoImage from "@/public/img/Logo.svg"
 import { relative } from "path";
 
 export default function Leistungen() {
@@ -24,19 +21,7 @@ export default function Leistungen() {
 
             <br/>Preis: 70.-/h
             </p>
-            <div className="col-md2">
-          <Image src={logoImage} 
-                placeholder="blur"
-                quality={50}
-                className="img-fluid"
-                style={{ height: "75%", maxHeight: "600px", objectFit: "contain", paddingBottom:"2em"}}
-                alt="Logo Team Hund-Mensch"
-                blurDataURL="@/public/img/Logo.svg"
-
-                >
-                        
-            </Image>
-          </div>
+ 
           </div>
         </div>
      
