@@ -70,9 +70,9 @@ export default function Slider() {
         </div>
       ))}
 
-      <a className={Style.prev} onClick={prevSlide}>
+      <div className={Style.prev} onClick={prevSlide}>
         ❮
-      </a>
+      </div>
       <a className={Style.next} onClick={nextSlide}>
         ❯
       </a>
