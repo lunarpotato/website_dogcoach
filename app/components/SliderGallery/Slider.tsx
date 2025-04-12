@@ -1,25 +1,19 @@
-"use client"
-import React, {useState, useEffect, useRef} from "react";
-import { styleText } from "util";
-// import { Carousel, CarouselItem } from "react-bootstrap";
+"use client";
+import React, { useState, useEffect, useRef } from "react";
 import Style from "../SliderGallery/Slider.module.css";
-
 
 const images = [
   {
     src: "/img/dog_backpack.jpg",
     caption: "Caption Text",
-    loading: "lazy",
   },
   {
     src: "/img/forest_walk.jpg",
     caption: "Caption Two",
-    loading: "lazy",
   },
   {
     src: "/img/paws_hands.jpg",
     caption: "Caption Three",
-    loading: "lazy",
   },
 ];
 
@@ -27,6 +21,14 @@ export default function Slider() {
   const [current, setCurrent] = useState(0);
   const length = images.length;
   const [isHovered, setIsHovered] = useState(false);
+
+  //Images preloaden
+  useEffect(() => {
+    images.forEach((img) => {
+      const preloadImg = new Image();
+      preloadImg.src = img.src;
+    });
+  }, []);
 
   const nextSlide = () => {
     setCurrent((prev) => (prev === length - 1 ? 0 : prev + 1));
@@ -52,7 +54,7 @@ export default function Slider() {
 
   return (
     <div
-    className={Style["slideshow-container"]}
+      className={Style["slideshow-container"]}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -63,16 +65,20 @@ export default function Slider() {
         >
           {index === current && (
             <>
-              <img src={img.src} style={{ width: "100%" }} alt={`Slide ${index}`} />
+              <img
+                src={img.src}
+                style={{ width: "100%" }}
+                alt={`Slide ${index}`}
+              />
               <div className={Style.text}>{img.caption}</div>
             </>
           )}
         </div>
       ))}
 
-      <div className={Style.prev} onClick={prevSlide}>
+      <a className={Style.prev} onClick={prevSlide}>
         ❮
-      </div>
+      </a>
       <a className={Style.next} onClick={nextSlide}>
         ❯
       </a>
