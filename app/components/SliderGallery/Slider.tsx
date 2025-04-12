@@ -27,6 +27,7 @@ export default function Slider() {
     images.forEach((img) => {
       const preloadImg = new Image();
       preloadImg.src = img.src;
+      preloadImg.decode().catch(() => {});
     });
   }, []);
 
