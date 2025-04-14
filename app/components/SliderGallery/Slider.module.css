@@ -5,7 +5,10 @@
   max-width: 1000px;
   position: relative;
   margin: auto;
+  transition: 0.5s ease-in;
 }
+
+
 
 /* Next & previous buttons */
 .prev, .next {
@@ -68,10 +71,13 @@
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 3.25s;
+  animation-duration: 2.75s;
 }
 
 @keyframes fade {
-  from {opacity: .3}
+  from {opacity: .5}
   to {opacity: 1}
 }
+
+
+

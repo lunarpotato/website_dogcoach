@@ -13,6 +13,7 @@
     transition: color .3s ease-in-out;
     display: inline-block;
     position: relative;
+    animation: 1s ease-in 0s 1 slideInFromLeft;
 }
 
 .nav-link:hover {
@@ -47,6 +48,7 @@
   margin-right: 2.5em;
   cursor: pointer;
   transition: transform .5s;
+  animation: 1s ease-in 0s 1 slideInFromLeft;
 }
 
 .logo:hover {
@@ -130,4 +132,13 @@
   background-clip: padding-box;
   border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
   border-radius: var(--bs-dropdown-border-radius);
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translate X (0);
+  }
 }
