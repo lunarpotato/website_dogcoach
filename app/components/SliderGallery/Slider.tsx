@@ -62,7 +62,7 @@ export default function Slider() {
       {images.map((img, index) => (
         <div
           key={index}
-          className={`${Style.mySlide} ${index === current ? Style.active : ""}`}
+          className={`${Style.mySlide} ${index === current ? `${Style.active} ${Style.fade}` : ""}`}
         >
           {index === current && (
             <>
