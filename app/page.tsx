@@ -3,6 +3,7 @@ import dogHeaderimage from "../public/img/dogwithhuman.jpg";
 import Slider from "./components/SliderGallery/Slider";
 import Button from "./components/Button/Button";
 import Style from "./page.module.css";
+import ImageSlider from "./components/ImageSlider/ImageSlider";
 
 export default function Home() {
   return (
@@ -57,9 +58,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container container-custom">
+      {/* <div className="container container-custom">
         <Slider />
-      </div>
+      </div> */}
+
+    
     </main>
   );
 }
