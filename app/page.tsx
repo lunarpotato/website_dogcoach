@@ -61,8 +61,7 @@ export default function Home() {
       {/* <div className="container container-custom">
         <Slider />
       </div> */}
-
-    
+      <ImageSlider></ImageSlider>
     </main>
   );
 }
