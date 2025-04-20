@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Pagination, Mousewheel } from "swiper/modules";
 
 //Styles
 import "swiper/css";
@@ -14,11 +14,11 @@ import Styles from "./ImageSlider.module.css";
 export default function ImageSlider() {
   return (
     <Swiper
-      // direction="vertical"
+      direction="horizontal"
       loop={true}
-      navigation={true}
       pagination={{ clickable: true }}
-      modules={[Navigation, Pagination]}
+      mousewheel={{ invert: true }}
+      modules={[Pagination, Mousewheel]}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
     >
