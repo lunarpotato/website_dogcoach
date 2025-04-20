@@ -1,0 +1,24 @@
+.slideWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-color: #39393987;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slideImage {
+  position: absolute;
+  width: 70%;
+  height: 80%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .slideImage {
+    width: 100%;
+    height: 100%;
+  }
+}

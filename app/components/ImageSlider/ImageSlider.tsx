@@ -23,14 +23,44 @@ export default function ImageSlider() {
       onSwiper={(swiper) => console.log(swiper)}
     >
       <SwiperSlide>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr? sed diam
-        voluptua.{" "}
+        <div className={Styles.slideWrapper}>
+          <img
+            src="../img/sitzen_am_waldrand.jpg"
+            className={Styles.slideImage}
+          ></img>
+        </div>
+
+        <span>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr? sed diam
+          voluptua.{" "}
+        </span>
       </SwiperSlide>
       <SwiperSlide>
-        Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-        aliquyam erat?
+        <div className={Styles.slideWrapper}>
+          <img
+            src="../img/spazieren_mithunden.jpg"
+            className={Styles.slideImage}
+          ></img>
+        </div>
+
+        <span>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr? sed diam
+          voluptua.{" "}
+        </span>
       </SwiperSlide>
-      <SwiperSlide>Invidunt ut labore et dolore magna aliquyam?</SwiperSlide>
+      <SwiperSlide>
+        <div className={Styles.slideWrapper}>
+          <img
+            src="../img/sitzen_in_der_wiese.jpg"
+            className={Styles.slideImage}
+          ></img>
+        </div>
+
+        <span>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr? sed diam
+          voluptua.{" "}
+        </span>
+      </SwiperSlide>
     </Swiper>
   );
 }
