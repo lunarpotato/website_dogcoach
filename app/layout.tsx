@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <body className={montserrat.className} style={{ minHeight: "100vh", backgroundColor: "#39393987" }}>
+      <body className={montserrat.className} style={{ minHeight: "100vh" }}>
         {/* Navigation */}
         <Navbar />
         {children}

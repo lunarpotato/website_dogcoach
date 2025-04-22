@@ -8,6 +8,8 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
+  margin-top: 4rem;
 }
 
 .slideImage {
@@ -28,10 +30,10 @@
   width: 30%;
   height: 30%;
   padding-left: 2rem;
-  padding-top: 1rem;
-  color: #bfd59ec4;
-  font-size: large;
-  background-color: rgba(250, 235, 215, 0);
+  padding-top: 3rem;
+  color: #a392a8;
+  font-size: 3vh;
+  background-color: #faebd700;
   cursor: pointer;
   transition: transform 0.5s;
 }
@@ -43,6 +45,7 @@
 @media (max-width: 991) {
   .slideText {
     padding-left: 1rem;
+    font-size: large;
   }
 }
 
@@ -56,6 +59,7 @@
   .slideText {
     position: relative;
     margin-top: 4rem;
+    padding-top: 0.5rem;
     width: 100%;
     height: 30%;
     background-color: #39393960;
