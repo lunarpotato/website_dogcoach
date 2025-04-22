@@ -88,7 +88,7 @@ export default function CreateForm() {
   return (
     <form onSubmit={handleSubmit}>
       <>
-        <div className="container">
+        <div className="container" style={{ maxWidth: "900px" }}>
           <div className="card">
             <div className="card-body">
               <div className="col-12">

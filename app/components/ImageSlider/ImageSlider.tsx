@@ -19,7 +19,7 @@ export default function ImageSlider() {
     <Swiper
       direction="horizontal"
       loop={true}
-      autoplay={{ delay: 7000, pauseOnMouseEnter: true }}
+      autoplay={{ delay: 6000, pauseOnMouseEnter: true }}
       pagination={{ clickable: true }}
       modules={[Pagination, Autoplay]}
       onSlideChange={() => console.log("slide change")}
