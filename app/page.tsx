@@ -62,7 +62,7 @@ export default function Home() {
         <Slider />
       </div> */}
       <div className="container">
-      <ImageSlider></ImageSlider>
+        <ImageSlider />
       </div>
     </main>
   );

@@ -29,12 +29,10 @@ export default function ImageSlider() {
             src="../img/sitzen_am_waldrand.jpg"
             className={Styles.slideImage}
           ></img>
+          <p className={Styles.slideText}>
+            Du verstehst das Verhalten deines Hundes nicht?
+          </p>
         </div>
-
-        <span>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr? sed diam
-          voluptua.{" "}
-        </span>
       </SwiperSlide>
       <SwiperSlide>
         <div className={Styles.slideWrapper}>
@@ -42,12 +40,11 @@ export default function ImageSlider() {
             src="../img/spazieren_mithunden.jpg"
             className={Styles.slideImage}
           ></img>
-        </div>
 
-        <span>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr? sed diam
-          voluptua.{" "}
-        </span>
+          <p className={Styles.slideText}>
+            Du hast den Eindruck keinen Kontakt zu deinem Hund zu haben?{" "}
+          </p>
+        </div>
       </SwiperSlide>
       <SwiperSlide>
         <div className={Styles.slideWrapper}>
@@ -55,12 +52,11 @@ export default function ImageSlider() {
             src="../img/sitzen_in_der_wiese.jpg"
             className={Styles.slideImage}
           ></img>
+          <p className={Styles.slideText}>
+            Du wünschst dir Unterstützung für eine Veränderung Eures
+            Problems?{" "}
+          </p>
         </div>
-
-        <span>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr? sed diam
-          voluptua.{" "}
-        </span>
       </SwiperSlide>
     </Swiper>
   );
