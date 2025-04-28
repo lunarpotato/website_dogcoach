@@ -42,9 +42,3 @@ export default function Logo({
     />
   );
 }
-
-{
-  /* <li className= {Style["logo"]}>
-<img width={55} height={55} src="../img/Logo.svg" ></img>  
-</li> */
-}

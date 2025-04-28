@@ -65,7 +65,7 @@
 }
 
 .logo:hover {
-  transform: scale(1.03);
+  transform: scale(1.25);
 }
 
 .navbar-toggler {
@@ -155,5 +155,21 @@
   }
   100% {
     transform: translate X (0);
+  }
+}
+
+@media (max-width: 991) {
+  .nav_body {
+    background-color: #ffffff78;
+    position: relative;
+    top: 0;
+    z-index: 1030;
+    height: 3.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .nav_body:hover {
+    height: 3.5rem;
   }
 }

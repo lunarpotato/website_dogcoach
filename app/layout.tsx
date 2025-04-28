@@ -21,15 +21,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <body className={montserrat.className} style={{ minHeight: "100vh" }}>
+      <body className={montserrat.className}>
         {/* Navigation */}
         <Navbar />
         {children}
 
         {/* Footer */}
-        <nav className="navbar navbar-expand-lg sticky-bottom position-relative">
+        <footer className="footer">
           <div className="container-fluid">Hier ist der Footer</div>
-        </nav>
+        </footer>
       </body>
     </html>
   );
