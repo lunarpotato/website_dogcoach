@@ -18,8 +18,8 @@ export default function Logo({
   _url,
   _className = "",
   _src,
-  _width = 55,
-  _height = 55,
+  _width = 50,
+  _height = 50,
   _alt,
 }: {
   _url: string;
