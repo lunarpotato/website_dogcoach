@@ -28,7 +28,7 @@ export default function RootLayout({
 
         {/* Footer */}
         <footer className="footer">
-          <div className="container-fluid">Hier ist der Footer</div>
+          <div className="container">Hier ist der Footer</div>
         </footer>
       </body>
     </html>

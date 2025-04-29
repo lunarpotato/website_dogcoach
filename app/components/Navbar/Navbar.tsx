@@ -3,14 +3,12 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Style from "./Navbar.module.css";
 import Dropdown from "react-bootstrap/Dropdown";
-import DropdownMenu from "react-bootstrap/DropdownMenu";
-import DropdownItem from "react-bootstrap/DropdownItem";
 import Logo from "../Logo/Logo";
 
 export default function Navbar() {
   //#region Titel für die Navigation
   const startseite = "Startseite";
-  const leistungen = "Leistungen";
+  const angebot = "Angebot";
   const aboutMe = "Über mich";
   const contact = "Kontakt";
   //#endregion
@@ -43,8 +41,8 @@ export default function Navbar() {
               </li>
 
               <li className="nav-link">
-                <Link className={Style["nav-link"]} href="/leistungen">
-                  {leistungen}
+                <Link className={Style["nav-link"]} href="/angebot">
+                  {angebot}
                 </Link>
               </li>
 
@@ -89,10 +87,10 @@ export default function Navbar() {
               </Dropdown.Item>
               <Dropdown.Item
                 as={Link}
-                href="/leistungen"
+                href="/angebot"
                 className={Style["dropdown-item"]}
               >
-                {leistungen}
+                {angebot}
               </Dropdown.Item>
               <Dropdown.Item
                 as={Link}
