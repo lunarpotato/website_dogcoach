@@ -28,7 +28,12 @@ export default function RootLayout({
 
         {/* Footer */}
         <footer className="footer">
-          <div className="container">Hier ist der Footer</div>
+          <div
+            className="container d-flex justify-content-center"
+            style={{ paddingTop: "1rem", color: "#90739a" }}
+          >
+            © 2025 all rights reserved
+          </div>
         </footer>
       </body>
     </html>
