@@ -89,18 +89,36 @@ export default function CreateForm() {
     <form onSubmit={handleSubmit}>
       <>
         <div className="container" style={{ maxWidth: "900px" }}>
-          <div className="card">
-            <div className="card-body">
+          <div
+            className="card"
+            style={{ border: "#bfd59ec4", borderRadius: "0.75rem" }}
+          >
+            <div
+              className="card-body"
+              style={{
+                color: "#ffffffb0",
+                backgroundColor: "#bfd59ec4",
+                borderRadius: "0.75rem",
+              }}
+            >
               <div className="col-12">
-                <h3>Kontakt aufnehmen</h3>
+                <h3 style={{ color: "#2D4A00" }}>Kontakt aufnehmen</h3>
                 <div className="row g-3">
                   <div className="col-sm-6">
-                    <label htmlFor="firstName" className="form-label">
+                    <label
+                      htmlFor="firstName"
+                      className="form-label"
+                      style={{ color: "#2D4A00" }}
+                    >
                       Vorname
                     </label>
                     <input
                       type="text"
                       className="form-control"
+                      style={{
+                        backgroundColor: "#ffffffb0",
+                        borderColor: "#393939",
+                      }}
                       id="firstName"
                       name="firstName"
                       value={formData.firstName}
@@ -114,12 +132,20 @@ export default function CreateForm() {
                     </div>
                   </div>
                   <div className="col-sm-6">
-                    <label htmlFor="lastName" className="form-label">
+                    <label
+                      htmlFor="lastName"
+                      className="form-label"
+                      style={{ color: "#2D4A00" }}
+                    >
                       Nachname
                     </label>
                     <input
                       type="text"
                       className="form-control"
+                      style={{
+                        backgroundColor: "#ffffffb0",
+                        borderColor: "#393939",
+                      }}
                       id="lastName"
                       name="lastName"
                       value={formData.lastName}
@@ -133,11 +159,19 @@ export default function CreateForm() {
                     </div>
                   </div>
                   <div className="col-sm-6">
-                    <label htmlFor="email" className="form-label">
+                    <label
+                      htmlFor="email"
+                      className="form-label"
+                      style={{ color: "#2D4A00" }}
+                    >
                       Email <span className="text-body-secondary"></span>
                     </label>
                     <input
                       type="email"
+                      style={{
+                        backgroundColor: "#ffffffb0",
+                        borderColor: "#393939",
+                      }}
                       className="form-control"
                       id="email"
                       name="email"
@@ -156,13 +190,21 @@ export default function CreateForm() {
                   </div>
 
                   <div className="col-sm-6">
-                    <label htmlFor="telefonNummer" className="form-label">
+                    <label
+                      htmlFor="telefonNummer"
+                      className="form-label"
+                      style={{ color: "#2D4A00" }}
+                    >
                       Telefonnummer{" "}
                       <span className="text-body-secondary"></span>
                     </label>
                     <input
                       type="telefonNummer"
                       className="form-control"
+                      style={{
+                        backgroundColor: "#ffffffb0",
+                        borderColor: "#393939",
+                      }}
                       id="telefonNummer"
                       name="telefonNummer"
                       value={formData.telefonNummer}
@@ -176,11 +218,19 @@ export default function CreateForm() {
                   </div>
 
                   <div className="col-12">
-                    <label htmlFor="nachricht" className="form-label">
+                    <label
+                      htmlFor="nachricht"
+                      className="form-label"
+                      style={{ color: "#2D4A00" }}
+                    >
                       Nachricht <span className="text-body-secondary"></span>
                     </label>
                     <textarea
                       className="form-control"
+                      style={{
+                        backgroundColor: "#ffffffb0",
+                        borderColor: "#393939",
+                      }}
                       rows={3}
                       id="nachricht"
                       name="nachricht"
@@ -208,6 +258,7 @@ export default function CreateForm() {
                 <button
                   type="submit"
                   className="btn btn-success rounded-pill px-3"
+                  style={{ marginTop: "1rem" }}
                   disabled={isLoading}
                   aria-label={
                     isLoading ? "Nachricht wird gesendet" : "Formular absenden"
