@@ -240,7 +240,10 @@ export default function CreateForm() {
                       aria-label="Das Eingabefeld für Ihre Nachricht."
                       required
                     />
-                    <div className="invalid-feedback">
+                    <div
+                      className="invalid-feedback"
+                      style={{ color: "#2D4A00" }}
+                    >
                       Bitte gib hier eine Nachricht ein.
                     </div>
                   </div>
@@ -268,6 +271,7 @@ export default function CreateForm() {
                     <>
                       <span
                         className="spinner-border spinner-border-sm"
+                        style={{ color: "#2D4A00" }}
                         role="status"
                         aria-hidden="true"
                       ></span>{" "}
@@ -294,7 +298,7 @@ export default function CreateForm() {
 
                 {/* Timer für Weiterleitung */}
                 {status === "Nachricht wurde erfolgreich gesendet!" && (
-                  <div className="mt-3">
+                  <div className="mt-3" style={{ color: "#2D4A00" }}>
                     Weiterleitung auf die Hauptseite in <strong>{timer}</strong>{" "}
                     Sekunde{timer !== 1 ? "n" : ""}...
                   </div>
