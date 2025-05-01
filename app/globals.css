@@ -3,6 +3,7 @@
 body {
   background: linear-gradient(#8fb15c, #90739a);
   min-height: 100vh;
+  cursor: url(/img/cursor.png), auto;
 }
 
 .container-custom {
