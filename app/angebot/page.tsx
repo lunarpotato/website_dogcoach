@@ -14,7 +14,7 @@ export default function Leistungen() {
         }}
       >
         <div className="row featurette">
-          <div className="col-md-7">
+          <div className="col-lg-6">
             <h1 className="featurette-heading fw-normal lh-1 custom-heading">
               Angebot {""}
             </h1>
@@ -30,6 +30,21 @@ export default function Leistungen() {
               <br />
               Preis: 70.-/h
             </p>
+          </div>
+
+          <div className="col-lg-6">
+            <img
+              className="image"
+              style={{
+                minHeight: "100px",
+                maxHeight: "400px",
+                width: "100%",
+                objectFit: "contain",
+                paddingBottom: "1rem",
+                paddingTop: "1rem",
+              }}
+              src="./img/logo.svg"
+            />
           </div>
         </div>
       </div>

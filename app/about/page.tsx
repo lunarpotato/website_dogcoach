@@ -7,7 +7,7 @@ export default function About() {
         className="container container-custom overflow-hidden"
         style={{ marginTop: "2rem", marginBottom: "2rem" }}
       >
-        <div className="row">
+        <div className="row featurette">
           <div className="col-lg-6">
             <h1 className="featurette-heading fw-normal lh-1 custom-heading">
               Über mich{""}
@@ -29,7 +29,7 @@ export default function About() {
               className="image"
               style={{
                 minHeight: "200px",
-                maxHeight: "800px",
+                maxHeight: "600px",
                 width: "100%",
                 objectFit: "cover",
                 paddingBottom: "1rem",
