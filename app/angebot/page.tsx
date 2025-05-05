@@ -27,14 +27,17 @@ export default function Leistungen() {
               wichtige Begriffe auf dem Weg zu einem entspannten Team
               Hund-Mensch. Ich biete Einzelcoachings an, keine Gruppenstunden
               oder Rudelspaziergänge.
-              <br />
-              Preis: 70.-/h
+              
             </p>
+            <h4 className="custom-heading fw-normal lh-4" style={{paddingLeft: "1rem", marginBottom:"4rem"}}>Preis: 70.-/h</h4>
+           
+
           </div>
 
           <div className="col-lg-6">
             <img
               className="image"
+              loading="lazy"
               style={{
                 minHeight: "100px",
                 maxHeight: "400px",

@@ -27,6 +27,7 @@ export default function About() {
           <div className="col-lg-6 lg-gy-5">
             <img
               className="image"
+              loading="lazy"
               style={{
                 minHeight: "200px",
                 maxHeight: "600px",
