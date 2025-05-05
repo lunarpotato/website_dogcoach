@@ -51,12 +51,12 @@ export default function Home() {
           >
             Individuelles Coaching für ein harmonisches Mensch-Hund-Team.
           </div>
+        
+         
         </div>
-
-        {/* <div className="container d-flex justify-content-center">
-          <Button _url="/contact" _type="button" _className="btn btn-custom" />
-        </div> */}
       </div>
+
+      <img className={Style.printwalk} src="./img/printwalk.svg"></img>
 
       <div className="container">
         <ImageSlider />
