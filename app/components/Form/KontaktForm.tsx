@@ -250,7 +250,7 @@ export default function CreateForm() {
                 </div>
                 <hr className="my-4" />
 
-                {/* Verwende die Google-reCAPTCHA Komponente. */}
+                {/* Verwende die Google-reCAPTCHA Komponente.. */}
                 <ReCAPTCHA
                   aria-label="Bestätigung, dass Sie kein Roboter sind"
                   sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
