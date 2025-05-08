@@ -86,83 +86,149 @@ export default function CreateForm() {
   return (
     <Form action="/search" >
       <>
-      <div className="container container_special">
+        <div className="container" style={{ maxWidth: "900px" }}>
+          <div
+            className="card"
+            style={{ border: "#bfd59ec4", borderRadius: "0.75rem" }}
+          >
+            <div
+              className="card-body"
+              style={{
+                color: "#ffffffb0",
+                backgroundColor: "#bfd59ec4",
+                borderRadius: "0.75rem",
+              }}
+            >
+              <div className="col-12">
+                <h3 style={{ color: "#2D4A00" }}>Kontakt aufnehmen</h3>
+                <div className="row g-3">
+                  <div className="col-sm-6">
+                    <label
+                      htmlFor="firstName"
+                      className="form-label"
+                      style={{ color: "#2D4A00" }}
+                    >
+                      Vorname
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      style={{
+                        backgroundColor: "#ffffffb0",
+                        borderColor: "#393939",
+                      }}
+                      id="firstName"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      placeholder=""
+                      aria-label="Das Eingabefeld für den Vornamen"
+                      required
+                    />
+                    <div className="invalid-feedback">
+                      Bitte gib hier deinen Vornamen ein
+                    </div>
+                  </div>
+                  <div className="col-sm-6">
+                    <label
+                      htmlFor="lastName"
+                      className="form-label"
+                      style={{ color: "#2D4A00" }}
+                    >
+                      Nachname
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      style={{
+                        backgroundColor: "#ffffffb0",
+                        borderColor: "#393939",
+                      }}
+                      id="lastName"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      placeholder=""
+                      aria-label="Das Eingabefeld für den Nachnamen"
+                      required
+                    />
+                    <div className="invalid-feedback">
+                      Bitte gib hier deinen Nachnamen ein
+                    </div>
+                  </div>
+                  <div className="col-sm-6">
+                    <label
+                      htmlFor="email"
+                      className="form-label"
+                      style={{ color: "#2D4A00" }}
+                    >
+                      Email <span className="text-body-secondary"></span>
+                    </label>
+                    <input
+                      type="email"
+                      style={{
+                        backgroundColor: "#ffffffb0",
+                        borderColor: "#393939",
+                      }}
+                      className="form-control"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="muster@beispiel.com"
+                      aria-label="Das Eingabefeld für die E-Mail Adresse"
+                      required
+                    />
+                    <div
+                      className="invalid-feedback"
+                      aria-label="Bitte geben Sie eine gültige E-Mail Adresse ein"
+                    >
+                      Bitte gib hier eine gültige Email Adresse ein
+                    </div>
+                  </div>
 
-        <div className='card'>
-          <div className='card-body'>
-
-       <div className="col-12">
-        <h3>Kontaktformular</h3>
-        
-        
-          <div className="row g-3">
-            <div className="col-sm-6">
-              <label htmlFor="firstName" className="form-label">
-                Vorname
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                id="firstName"
-                placeholder=""
-                defaultValue=""
-                required
-              />
-              <div className="invalid-feedback">Bitte gib hier deinen Vornamen ein</div>
-            </div>
-            <div className="col-sm-6">
-              <label htmlFor="lastName" className="form-label">
-                Nachname
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                id="lastName"
-                placeholder=""
-                defaultValue=""
-                required
-              />
-              <div className="invalid-feedback">Bitte gib hier deinen Nachnamen ein</div>
-            </div>
-          
-            <div className="col-sm-6">
-              <label htmlFor="email" className="form-label">
-                Email <span className="text-body-secondary"></span>
-              </label>
-              <input
-                type="email"
-                className="form-control"
-                id="email"
-                placeholder="muster@beispiel.com"
-                required
-              />
-              <div className="invalid-feedback">
-                Bitte gib hier eine gültige Email Adresse ein
-              </div>
-            </div>
-
-            <div className="col-sm-6">
-              <label htmlFor="phonenumber" className="form-label">
-                Telefonnummer <span className="text-body-secondary"></span>
-              </label>
-              <input
-                type="phonenumber"
-                className="form-control"
-                id="phonenumber"
-                placeholder="000 000 00 00"
-                required
-              />
-              <div className="invalid-feedback">
-                Bitte gib hier eine gültige Telefonnummer ein
-              </div>
-            </div>  
+                  <div className="col-sm-6">
+                    <label
+                      htmlFor="telefonNummer"
+                      className="form-label"
+                      style={{ color: "#2D4A00" }}
+                    >
+                      Telefonnummer{" "}
+                      <span className="text-body-secondary"></span>
+                    </label>
+                    <input
+                      type="telefonNummer"
+                      className="form-control"
+                      style={{
+                        backgroundColor: "#ffffffb0",
+                        borderColor: "#393939",
+                      }}
+                      id="telefonNummer"
+                      name="telefonNummer"
+                      value={formData.telefonNummer}
+                      onChange={handleChange}
+                      placeholder="(Optional)"
+                      aria-label="Das Eingabefeld für die Telefonnummer. Diese Eingabe ist optional."
+                    />
+                    <div className="invalid-feedback">
+                      Bitte gib hier eine gültige Telefonnummer ein
+                    </div>
+                  </div>
 
                   <div className="col-12">
-                    <label htmlFor="nachricht" className="form-label">
+                    <label
+                      htmlFor="nachricht"
+                      className="form-label"
+                      style={{ color: "#2D4A00" }}
+                    >
                       Nachricht <span className="text-body-secondary"></span>
                     </label>
                     <textarea
                       className="form-control"
+                      style={{
+                        backgroundColor: "#ffffffb0",
+                        borderColor: "#393939",
+                      }}
                       rows={3}
                       id="nachricht"
                       name="nachricht"
@@ -172,7 +238,10 @@ export default function CreateForm() {
                       aria-label="Das Eingabefeld für Ihre Nachricht."
                       required
                     />
-                    <div className="invalid-feedback">
+                    <div
+                      className="invalid-feedback"
+                      style={{ color: "#2D4A00" }}
+                    >
                       Bitte gib hier eine Nachricht ein.
                     </div>
                   </div>
@@ -190,6 +259,7 @@ export default function CreateForm() {
                 <button
                   type="submit"
                   className="btn btn-success rounded-pill px-3"
+                  style={{ marginTop: "1rem" }}
                   disabled={isLoading}
                   aria-label={
                     isLoading ? "Nachricht wird gesendet" : "Formular absenden"
@@ -199,6 +269,7 @@ export default function CreateForm() {
                     <>
                       <span
                         className="spinner-border spinner-border-sm"
+                        style={{ color: "#2D4A00" }}
                         role="status"
                         aria-hidden="true"
                       ></span>{" "}
@@ -225,7 +296,7 @@ export default function CreateForm() {
 
                 {/* Timer für Weiterleitung */}
                 {status === "Nachricht wurde erfolgreich gesendet!" && (
-                  <div className="mt-3">
+                  <div className="mt-3" style={{ color: "#2D4A00" }}>
                     Weiterleitung auf die Hauptseite in <strong>{timer}</strong>{" "}
                     Sekunde{timer !== 1 ? "n" : ""}...
                   </div>

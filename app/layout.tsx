@@ -22,9 +22,20 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body className={montserrat.className}>
+        {/* Navigation */}
         <Navbar />
 
         {children}
+
+        {/* Footer */}
+        <footer className="footer">
+          <div
+            className="container d-flex justify-content-center"
+            style={{ paddingTop: "1rem", color: "#90739a" }}
+          >
+            © 2025 all rights reserved
+          </div>
+        </footer>
       </body>
     </html>
   );
