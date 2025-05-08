@@ -1,0 +1,13 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables'; 
+
+$primary-color: #3498db;    // Primärfarbe (z. B. Blau)
+$secondary-color: #2ecc71;  // Sekundärfarbe (z. B. Grün)
+$accent-color: #e74c3c;     // Akzentfarbe (z. B. Rot)
+
+// Definiere helle und dunkle Farben
+$light-color: #719471;      // Helle Farbe (z. B. für Hintergründe)
+$dark-color: #1c1b1d;       // Dunkle Farbe (z. B. für Text)
+
+$background-color: $light-color; // Definiert die Hintergrundfarbe
+$text-color: $dark-color;   // Definiert die Textfarbe

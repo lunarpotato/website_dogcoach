@@ -1,4 +1,4 @@
-import "./globals.css";
+import "./costum-bootstrap.scss";
 import { Montserrat } from "next/font/google";
 
 // components
@@ -21,15 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <body className={montserrat.className} style={{ minHeight: "100vh", backgroundColor: "#39393987" }}>
-        {/* Navigation */}
+      <body className={montserrat.className}>
         <Navbar />
-        {children}
 
-        {/* Footer */}
-        <nav className="navbar navbar-expand-lg sticky-bottom position-relative">
-          <div className="container-fluid">Hier ist der Footer</div>
-        </nav>
+        {children}
       </body>
     </html>
   );

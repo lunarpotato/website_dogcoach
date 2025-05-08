@@ -1,11 +1,9 @@
-"use client";
-import Form from "next/form";
-import ReCAPTCHA from "react-google-recaptcha";
-import Styles from "./KontaktForm.module.css";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+"use client"
 
-///Komponente für das Kontakformular.
+import Form from 'next/form'
+import Style from '../components/Form/KontaktForm.module.scss'
+
+
 export default function CreateForm() {
   //Das Model für das Formular wird initialisiert.
   const [formData, setFormData] = useState({
@@ -86,94 +84,78 @@ export default function CreateForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <Form action="/search" >
       <>
-        <div className="container">
-          <div className="card">
-            <div className="card-body">
-              <div className="col-12">
-                <h3>Kontakt aufnehmen</h3>
-                <div className="row g-3">
-                  <div className="col-sm-6">
-                    <label htmlFor="firstName" className="form-label">
-                      Vorname
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="firstName"
-                      name="firstName"
-                      value={formData.firstName}
-                      onChange={handleChange}
-                      placeholder=""
-                      aria-label="Das Eingabefeld für den Vornamen"
-                      required
-                    />
-                    <div className="invalid-feedback">
-                      Bitte gib hier deinen Vornamen ein
-                    </div>
-                  </div>
-                  <div className="col-sm-6">
-                    <label htmlFor="lastName" className="form-label">
-                      Nachname
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="lastName"
-                      name="lastName"
-                      value={formData.lastName}
-                      onChange={handleChange}
-                      placeholder=""
-                      aria-label="Das Eingabefeld für den Nachnamen"
-                      required
-                    />
-                    <div className="invalid-feedback">
-                      Bitte gib hier deinen Nachnamen ein
-                    </div>
-                  </div>
-                  <div className="col-sm-6">
-                    <label htmlFor="email" className="form-label">
-                      Email <span className="text-body-secondary"></span>
-                    </label>
-                    <input
-                      type="email"
-                      className="form-control"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="muster@beispiel.com"
-                      aria-label="Das Eingabefeld für die E-Mail Adresse"
-                      required
-                    />
-                    <div
-                      className="invalid-feedback"
-                      aria-label="Bitte geben Sie eine gültige E-Mail Adresse ein"
-                    >
-                      Bitte gib hier eine gültige Email Adresse ein
-                    </div>
-                  </div>
+      <div className="container container_special">
 
-                  <div className="col-sm-6">
-                    <label htmlFor="telefonNummer" className="form-label">
-                      Telefonnummer{" "}
-                      <span className="text-body-secondary"></span>
-                    </label>
-                    <input
-                      type="telefonNummer"
-                      className="form-control"
-                      id="telefonNummer"
-                      name="telefonNummer"
-                      value={formData.telefonNummer}
-                      onChange={handleChange}
-                      placeholder="(Optional)"
-                      aria-label="Das Eingabefeld für die Telefonnummer. Diese Eingabe ist optional."
-                    />
-                    <div className="invalid-feedback">
-                      Bitte gib hier eine gültige Telefonnummer ein
-                    </div>
-                  </div>
+        <div className='card'>
+          <div className='card-body'>
+
+       <div className="col-12">
+        <h3>Kontaktformular</h3>
+        
+        
+          <div className="row g-3">
+            <div className="col-sm-6">
+              <label htmlFor="firstName" className="form-label">
+                Vorname
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="firstName"
+                placeholder=""
+                defaultValue=""
+                required
+              />
+              <div className="invalid-feedback">Bitte gib hier deinen Vornamen ein</div>
+            </div>
+            <div className="col-sm-6">
+              <label htmlFor="lastName" className="form-label">
+                Nachname
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="lastName"
+                placeholder=""
+                defaultValue=""
+                required
+              />
+              <div className="invalid-feedback">Bitte gib hier deinen Nachnamen ein</div>
+            </div>
+          
+            <div className="col-sm-6">
+              <label htmlFor="email" className="form-label">
+                Email <span className="text-body-secondary"></span>
+              </label>
+              <input
+                type="email"
+                className="form-control"
+                id="email"
+                placeholder="muster@beispiel.com"
+                required
+              />
+              <div className="invalid-feedback">
+                Bitte gib hier eine gültige Email Adresse ein
+              </div>
+            </div>
+
+            <div className="col-sm-6">
+              <label htmlFor="phonenumber" className="form-label">
+                Telefonnummer <span className="text-body-secondary"></span>
+              </label>
+              <input
+                type="phonenumber"
+                className="form-control"
+                id="phonenumber"
+                placeholder="000 000 00 00"
+                required
+              />
+              <div className="invalid-feedback">
+                Bitte gib hier eine gültige Telefonnummer ein
+              </div>
+            </div>  
 
                   <div className="col-12">
                     <label htmlFor="nachricht" className="form-label">
