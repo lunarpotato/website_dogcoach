@@ -39,6 +39,7 @@ export default function Leistungen() {
 
           <div className="col-lg-6">
             <Maps />
+
             <img
               className="image"
               loading="lazy"
