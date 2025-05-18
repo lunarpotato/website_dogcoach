@@ -1,7 +1,5 @@
 import Image from "next/image";
 import dogHeaderimage from "../public/img/dogwithhuman.jpg";
-import Slider from "./components/SliderGallery/Slider";
-import Button from "./components/Button/Button";
 import Style from "./page.module.css";
 import ImageSlider from "./components/ImageSlider/ImageSlider";
 
@@ -51,8 +49,6 @@ export default function Home() {
           >
             Individuelles Coaching für ein harmonisches Mensch-Hund-Team.
           </div>
-        
-         
         </div>
       </div>
 
