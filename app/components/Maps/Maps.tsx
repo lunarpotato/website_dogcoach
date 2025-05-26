@@ -1,11 +1,6 @@
-// export default function Maps() {
-//   return <h2>Maps</h2>;
-// }
-
 "use client";
 
 import React from "react";
-// import { createRoot } from "react-dom/client";
 import { AdvancedMarker, APIProvider, Map } from "@vis.gl/react-google-maps";
 
 export default function Maps() {
@@ -18,9 +13,10 @@ export default function Maps() {
       <Map
         style={{
           width: "auto",
-          height: "500px",
-          paddingTop: "5rem",
+          height: "540px",
+          paddingTop: "0.75rem",
           paddingRight: "1rem",
+          paddingLeft: "1rem",
         }}
         defaultCenter={{ lat: 47.6458625793457, lng: 9.17112922668457 }}
         mapId={"DEMO_MAP_ID"}

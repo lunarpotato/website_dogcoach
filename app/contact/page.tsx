@@ -1,4 +1,5 @@
 import Form from "../components/Form/KontaktForm";
+import Maps from "../components/Maps/Maps";
 
 export default function Kontakt() {
   return (
@@ -11,7 +12,15 @@ export default function Kontakt() {
         paddingBottom: "2rem",
       }}
     >
-      <Form />
+      <div className="row">
+        <div className="col-lg-6">
+          <Form />
+        </div>
+
+        <div className="col-lg-6">
+          <Maps />
+        </div>
+      </div>
     </div>
   );
 }
