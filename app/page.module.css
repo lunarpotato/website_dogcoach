@@ -4,14 +4,13 @@
 }
 
 .printwalk {
- 
-  width: 50%;
-  position:absolute;
-  top: 18vh;
+  padding-left: 5rem;
+  padding-top: 1rem;
+  position: absolute;
+  top: 30vh;
   z-index: 1030;
-  
-  height: 27%;
 
+  height: 38%;
 }
 
 @media (max-width: 991) {
@@ -22,7 +21,6 @@
 
 @media (max-width: 768px) {
   .printwalk {
-   height: 25%;
+    height: 25%;
   }
-
 }
