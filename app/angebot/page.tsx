@@ -1,6 +1,3 @@
-// import { relative } from "path";
-import Maps from "../components/Maps/Maps";
-
 export default function Leistungen() {
   return (
     <main>
