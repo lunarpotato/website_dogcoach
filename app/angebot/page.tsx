@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 export default function Leistungen() {
   return (
     <main>
@@ -38,6 +39,7 @@ export default function Leistungen() {
             <img
               className="image"
               loading="lazy"
+              alt=""
               style={{
                 minHeight: "100px",
                 maxHeight: "400px",
