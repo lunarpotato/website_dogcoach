@@ -1,3 +1,5 @@
+import Logo from "../components/Logo/Logo";
+
 /* eslint-disable @next/next/no-img-element */
 export default function Leistungen() {
   return (
@@ -36,20 +38,24 @@ export default function Leistungen() {
           </div>
 
           <div className="col-lg-6">
-            <img
-              className="image"
-              loading="lazy"
-              alt=""
+            <div
+              className="container"
               style={{
-                minHeight: "100px",
-                maxHeight: "400px",
-                width: "100%",
-                objectFit: "contain",
-                paddingBottom: "1rem",
-                paddingTop: "1rem",
+                paddingTop: "5rem",
+                paddingBottom: "5rem",
+                paddingLeft: "8rem",
+                paddingRight: "8rem",
               }}
-              src="./img/logo.svg"
-            />
+            >
+              <Logo
+                _url="/"
+                _className="logo"
+                _src="../img/Logo.svg"
+                _alt="logo"
+                _width={250}
+                _height={250}
+              />
+            </div>
           </div>
         </div>
       </div>
