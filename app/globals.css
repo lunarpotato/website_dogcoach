@@ -78,6 +78,9 @@ body {
   transform: scale(1.25);
 }
 
+.swiper-pagination-bullet-active {
+  background-color: #a392a8 !important;
+}
 @media (max-width: 475px) {
   .custom-text {
     font-size: 12px;

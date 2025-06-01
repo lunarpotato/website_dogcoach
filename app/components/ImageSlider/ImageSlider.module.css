@@ -64,9 +64,6 @@
 .slideText:hover {
   transform: scale(1.03);
 }
-:global(.swiper-pagination-bullet-active) {
-  background-color: #a392a8 !important;
-}
 
 @media (max-width: 991) {
   .slideText {
