@@ -14,7 +14,10 @@ export default function About() {
             <h1 className="featurette-heading fw-normal lh-1 custom-heading">
               Über mich{""}
             </h1>
-            <p className="lead lead-text" style={{ wordBreak: "break-word" }}>
+            <p
+              className="lead lead-text"
+              style={{ wordBreak: "break-word", letterSpacing: "0.05rem" }}
+            >
               Das Wesen Hund begleitet und begeistert mich von Kindheit an. Als
               ich an meiner ehemaligen Arbeitsstelle meinen Hund im Umgang mit
               beeinträchtigten und auch gesunden Menschen beobachtete, bekam ich

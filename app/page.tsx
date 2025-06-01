@@ -32,6 +32,7 @@ export default function Home() {
               style={{
                 maxWidth: "350px",
                 maxHeight: "200px",
+                letterSpacing: "0.05rem",
                 flexShrink: 1,
                 color: "#BFD59E",
                 backgroundColor: "#393939",
@@ -47,6 +48,7 @@ export default function Home() {
                 maxHeight: "200px",
                 flexShrink: 1,
                 wordBreak: "break-word",
+                letterSpacing: "0.05rem",
                 color: "#BFD59E",
                 backgroundColor: "#393939",
               }}

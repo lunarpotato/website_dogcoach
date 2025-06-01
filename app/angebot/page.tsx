@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import Logo from "../components/Logo/Logo";
 
 /* eslint-disable @next/next/no-img-element */
@@ -19,7 +20,10 @@ export default function Leistungen() {
             <h1 className="featurette-heading fw-normal lh-1 custom-heading">
               Angebot {""}
             </h1>
-            <p className="lead lead-text" style={{ wordBreak: "break-word" }}>
+            <p
+              className="lead lead-text"
+              style={{ wordBreak: "break-word", letterSpacing: "0.05rem" }}
+            >
               2021 habe ich bei Antonia Conzett in Steg im Tösstal die
               Coachingausbildung begonnen. Die Ausbildung ist abgeschlossen.
               Eine stete Weiterbildung und Austausch mit anderen Coaches
@@ -37,25 +41,20 @@ export default function Leistungen() {
             </h4>
           </div>
 
-          <div className="col-lg-6">
-            <div
-              className="container"
+          <div className="col-lg-6 lg-gy-5">
+            <img
+              className="image"
+              loading="lazy"
               style={{
-                paddingTop: "5rem",
-                paddingBottom: "5rem",
-                paddingLeft: "8rem",
-                paddingRight: "8rem",
+                minHeight: "200px",
+                maxHeight: "600px",
+                width: "100%",
+                objectFit: "cover",
+                paddingBottom: "1rem",
+                paddingTop: "1rem",
               }}
-            >
-              <Logo
-                _url="/"
-                _className="logo"
-                _src="../img/Logo.svg"
-                _alt="logo"
-                _width={300}
-                _height={300}
-              />
-            </div>
+              src="./img/spazieren_mit_see.jpg"
+            />
           </div>
         </div>
       </div>
