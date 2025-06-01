@@ -6,12 +6,11 @@ import Dropdown from "react-bootstrap/Dropdown";
 import Logo from "../Logo/Logo";
 
 export default function Navbar() {
-  //#region Titel für die Navigation
+  //Navigations Inhalt
   const startseite = "Startseite";
   const angebot = "Angebot";
   const aboutMe = "Über mich";
   const contact = "Kontakt";
-  //#endregion
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
 

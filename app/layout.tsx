@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 
 // components
 import Navbar from "./components/Navbar/Navbar";
+import Logo from "./components/Logo/Logo";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -28,12 +29,37 @@ export default function RootLayout({
 
         {/* Footer */}
         <footer className="footer">
-          <div
+          {/* <div
             className="container d-flex justify-content-center"
             style={{ paddingTop: "1rem", color: "#90739a" }}
           >
-            © 2025 all rights reserved
+            <Logo
+              _url="/"
+              _className="logo"
+              _src="../img/Logo.svg"
+              _alt="logo"
+            />
+            <p> © 2025 all rights reserved</p>
           </div>
+        */}
+
+          <ul
+            className="container d-flex justify-content-center"
+            style={{ textDecoration: "none" }}
+          >
+            <li>
+              <Logo
+                _url="/"
+                _className="logo"
+                _src="../img/Logo.svg"
+                _alt="logo"
+              />
+            </li>
+            <li>
+              {" "}
+              <p> © 2025 all rights reserved</p>
+            </li>
+          </ul>
         </footer>
       </body>
     </html>

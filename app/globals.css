@@ -60,11 +60,22 @@ body {
 
 .footer {
   background-color: #ffffff78;
-  height: 50px;
+  height: 70px;
   width: 100%;
   margin-top: 2rem;
   position: sticky;
   top: 100vh;
+}
+
+.logo {
+  margin-right: 2.5em;
+  cursor: pointer;
+  transition: transform 0.5s;
+  animation: 1s ease-in 0s 1 slideInFromLeft;
+}
+
+.logo:hover {
+  transform: scale(1.25);
 }
 
 @media (max-width: 475px) {
