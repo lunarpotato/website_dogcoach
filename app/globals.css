@@ -68,14 +68,13 @@ body {
 }
 
 .logo {
-  margin-right: 2.5em;
   cursor: pointer;
   transition: transform 0.5s;
   animation: 1s ease-in 0s 1 slideInFromLeft;
 }
 
 .logo:hover {
-  transform: scale(1.25);
+  transform: scale(1.15);
 }
 
 .swiper-pagination-bullet-active {

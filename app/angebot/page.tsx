@@ -52,8 +52,8 @@ export default function Leistungen() {
                 _className="logo"
                 _src="../img/Logo.svg"
                 _alt="logo"
-                _width={250}
-                _height={250}
+                _width={300}
+                _height={300}
               />
             </div>
           </div>

@@ -28,38 +28,34 @@ export default function RootLayout({
         {children}
 
         {/* Footer */}
-        <footer className="footer">
-          {/* <div
-            className="container d-flex justify-content-center"
-            style={{ paddingTop: "1rem", color: "#90739a" }}
-          >
+        <footer
+          className="footer container-fluid text-center"
+          style={{
+            color: "#90739a",
+            height: "auto",
+            paddingBottom: "0px",
+          }}
+        >
+          <div className="col mb-2" style={{ paddingTop: "2rem" }}>
             <Logo
               _url="/"
               _className="logo"
               _src="../img/Logo.svg"
               _alt="logo"
+              _height={90}
+              _width={90}
             />
-            <p> © 2025 all rights reserved</p>
           </div>
-        */}
-
-          <ul
-            className="container d-flex justify-content-center"
-            style={{ textDecoration: "none" }}
+          <div
+            className="col"
+            style={{
+              marginBottom: "0",
+              paddingTop: "1rem",
+              paddingBottom: "2rem",
+            }}
           >
-            <li>
-              <Logo
-                _url="/"
-                _className="logo"
-                _src="../img/Logo.svg"
-                _alt="logo"
-              />
-            </li>
-            <li>
-              {" "}
-              <p> © 2025 all rights reserved</p>
-            </li>
-          </ul>
+            © 2025 all rights reserved
+          </div>
         </footer>
       </body>
     </html>
