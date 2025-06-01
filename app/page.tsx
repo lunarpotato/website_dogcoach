@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import dogHeaderimage from "../public/img/dogwithhuman.jpg";
 import Style from "./page.module.css";

@@ -38,7 +38,7 @@ export default function Logo({
       width={_width}
       height={_height}
       src={_src}
-      alt=""
+      alt="Logo"
     />
   );
 }
