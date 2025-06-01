@@ -21,6 +21,7 @@
 
 @media (max-width: 768px) {
   .printwalk {
-    height: 23%;
+    padding-top: 1rem;
+    height: 25%;
   }
 }
