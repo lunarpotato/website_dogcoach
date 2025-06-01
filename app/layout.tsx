@@ -52,6 +52,7 @@ export default function RootLayout({
               marginBottom: "0",
               paddingTop: "1rem",
               paddingBottom: "2rem",
+              letterSpacing: "0.05rem",
             }}
           >
             © 2025 all rights reserved
