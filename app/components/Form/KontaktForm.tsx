@@ -1,5 +1,5 @@
 "use client";
-import Form from "next/form";
+
 import ReCAPTCHA from "react-google-recaptcha";
 import Styles from "./KontaktForm.module.css";
 import { useEffect, useState } from "react";

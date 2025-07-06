@@ -42,9 +42,14 @@ export default function Leistungen() {
           </div>
 
           <div className="col-lg-6 lg-gy-5">
+            <div className="container" style={{ maxWidth: "900px" }}>
+         
+          
+              
             <img
               className="image"
               loading="lazy"
+              
               style={{
                 minHeight: "200px",
                 maxHeight: "600px",
@@ -52,10 +57,16 @@ export default function Leistungen() {
                 objectFit: "cover",
                 paddingBottom: "1rem",
                 paddingTop: "1rem",
+                border: "1 px #bfd59e9c",
+                borderRadius: "1.25rem",
               }}
               src="./img/spazieren_mit_see.jpg"
             />
-          </div>
+            </div>
+        
+            </div>
+
+        
         </div>
       </div>
     </main>
