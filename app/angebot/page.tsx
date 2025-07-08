@@ -49,16 +49,17 @@ export default function Leistungen() {
             <img
               className="image"
               loading="lazy"
+              aria-placeholder="blur"
               
               style={{
-                minHeight: "200px",
+                minHeight: "150px",
                 maxHeight: "600px",
                 width: "100%",
                 objectFit: "cover",
-                paddingBottom: "1rem",
-                paddingTop: "1rem",
-                border: "1 px #bfd59e9c",
-                borderRadius: "1.25rem",
+                marginBottom: "1rem",
+                marginTop: "1rem",
+                
+               
               }}
               src="./img/spazieren_mit_see.jpg"
             />
