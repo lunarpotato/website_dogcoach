@@ -64,8 +64,8 @@ export default function Kontakt() {
                      <a 
                      href="mailto:teamhundmensch@gmail.com" 
                      className="form-label"
-                     style={{ color: "#2D4A00", textDecoration: "none", wordBreak: "break-word"}}
-                    >   teamhundmensch@gmail.com  </a>
+                     style={{ color: "#2D4A00", textDecoration: "none", wordWrap:"break-word"}}
+                    >   teamhundmensch<wbr/>@gmail.com  </a>
                   
                 
                 </div>
