@@ -4,7 +4,6 @@ import Image from "next/image";
 import dogHeaderimage from "../public/img/dogwithhuman.jpg";
 import Style from "./page.module.css";
 import ImageSlider from "./components/ImageSlider/ImageSlider";
-import StepsAnimation from "./components/StepsAnimation/StepsAnimation";
 
 export default function Home() {
   return (
@@ -53,12 +52,12 @@ export default function Home() {
                 backgroundColor: "#393939",
               }}
             >
-              Individuelles Coaching für ein harmonisches Mensch-Hund-Team.
+              Individuelles Coaching für ein harmonisches Hund-Mensch-Team.
             </div>
           </div>
         </div>
         <img className={Style.printwalk} src="./img/printwalk.svg"></img>
-        {/* <StepsAnimation></StepsAnimation> */}
+     
       </div>
 
       <div className="container">
