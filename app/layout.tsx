@@ -27,7 +27,7 @@ export default function RootLayout({
       <title>Team Hund-Mensch</title>
 
       <meta name="description" content="Team Hund-Mensch bietet individuelles Coaching für ein harmonisches Hund-Mensch-Team. Angeboten werden Einzelcoachings. Artgerechte Kommunikation, Verständnis, Wertschätzung und Verbundenheit sind wichtige Begriffe auf dem Weg zu einem entspannten Team Hund-Mensch."/>
-      <meta name="keywords" content="Coaching, Team, Hund, Mensch, Christine Strauss, Team-Hund-Mensch, Coaching-Hund-Mensch, Kreuzlingen, Thurgau, Einzelstunden, Artgereche Kommunikation, Verbundenheit, Wertschätzung"/>
+      <meta name="keywords" content="Individuelles Coaching, harmnonisches Hund-Mensch-Team, DogCoach Schweiz, Hundecoaching Ostschweiz, Christine Strauss Coaching, Artgerechte Kommunikation"/>
       <meta property="og:title" content="Team Hund-Mensch"/>
       <meta property="og:descripion" content="Team Hund-Mensch bietet individuelles Coaching für ein harmonisches Hund-Mensch-Team. Angeboten werden Einzelcoachings. Artgerechte Kommunikation, Verständnis, Wertschätzung und Verbundenheit sind wichtige Begriffe auf dem Weg zu einem entspannten Team Hund-Mensch."/>
       <meta property="og:image" content="./img/logo.svg"/>
