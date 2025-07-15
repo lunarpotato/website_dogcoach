@@ -20,7 +20,6 @@ export default function Logo({
   _src,
   _width = 50,
   _height = 50,
-  _alt,
 }: {
   _url: string;
   _className: string;
@@ -38,7 +37,7 @@ export default function Logo({
       width={_width}
       height={_height}
       src={_src}
-      alt="Logo"
+      
     />
   );
 }
