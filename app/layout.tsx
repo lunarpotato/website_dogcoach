@@ -13,8 +13,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Team Mensch-Hund",
-  description: "Professionelles Mensch & Hunde Coaching",
+  title: "Team Hund Mensch",
+  description: "Professionelles Mensch & Hunde Coaching in der Region Kreuzlingen",
+  keywords: "Individuelles Hund Mensch Coaching, Harmnonisches Hund-Mensch-Team, Hundecoaching Schweiz, Christine Strauss"
 };
 
 export default function RootLayout({
@@ -24,10 +25,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <title>Team Hund-Mensch</title>
 
-      <meta name="description" content="Team Hund-Mensch bietet individuelles Coaching für ein harmonisches Hund-Mensch-Team. Angeboten werden Einzelcoachings. Artgerechte Kommunikation, Verständnis, Wertschätzung und Verbundenheit sind wichtige Begriffe auf dem Weg zu einem entspannten Team Hund-Mensch."/>
-      <meta name="keywords" content="Individuelles Coaching, harmnonisches Hund-Mensch-Team, DogCoach Schweiz, Hundecoaching Ostschweiz, Christine Strauss Coaching, Artgerechte Kommunikation"/>
+    
       <meta property="og:title" content="Team Hund-Mensch"/>
       <meta property="og:descripion" content="Team Hund-Mensch bietet individuelles Coaching für ein harmonisches Hund-Mensch-Team. Angeboten werden Einzelcoachings. Artgerechte Kommunikation, Verständnis, Wertschätzung und Verbundenheit sind wichtige Begriffe auf dem Weg zu einem entspannten Team Hund-Mensch."/>
       <meta property="og:image" content="/img/logo.svg"/>
