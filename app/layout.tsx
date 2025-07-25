@@ -15,7 +15,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Team Hund Mensch",
+  title: "Team Hund-Mensch | Christine Strauss",
   description: "Professionelles Mensch & Hunde Coaching in der Region Kreuzlingen",
   keywords: "team hund und mensch, training für mensch und hund, hund verstehen, kommunizieren mit hund, Christine Strauss"
 };
