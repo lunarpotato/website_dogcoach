@@ -123,7 +123,7 @@ export default function CreateForm() {
                       name="firstName"
                       value={formData.firstName}
                       onChange={handleChange}
-                      placeholder=""
+                      placeholder="Vorname"
                       aria-label="Das Eingabefeld für den Vornamen"
                       required
                     />
@@ -150,7 +150,7 @@ export default function CreateForm() {
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleChange}
-                      placeholder=""
+                      placeholder="Nachname"
                       aria-label="Das Eingabefeld für den Nachnamen"
                       required
                     />

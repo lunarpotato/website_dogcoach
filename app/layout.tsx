@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Logo from "./components/Logo/Logo";
 import Head from "next/head";
 import ClientMeta from "./components/ClientMeta/ClientMeta";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 
 const montserrat = Montserrat({
@@ -47,6 +48,7 @@ export default function RootLayout({
         {/* Navigation */}
         <Navbar />
         {children}
+        <SpeedInsights/>
 
         {/* Footer */}
         <footer
