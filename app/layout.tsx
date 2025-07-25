@@ -38,6 +38,8 @@ export default function RootLayout({
         <meta property="og:image" content="/img/Logo.svg"/> 
 
         <ClientMeta/>
+
+        <link rel="canonical" href="www.teamhundmensch.ch" />
       </Head>
       
 
