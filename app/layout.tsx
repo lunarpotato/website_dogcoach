@@ -5,6 +5,8 @@ import { Montserrat } from "next/font/google";
 // components
 import Navbar from "./components/Navbar/Navbar";
 import Logo from "./components/Logo/Logo";
+import Head from "next/head";
+import ClientMeta from "./components/ClientMeta/ClientMeta";
 
 
 const montserrat = Montserrat({
@@ -15,7 +17,7 @@ const montserrat = Montserrat({
 export const metadata = {
   title: "Team Hund Mensch",
   description: "Professionelles Mensch & Hunde Coaching in der Region Kreuzlingen",
-  keywords: "hund und mensch, training für mensch und hund, hund verstehen, kommunizieren mit hund, team hund und mensch"
+  keywords: "team hund und mensch, training für mensch und hund, hund verstehen, kommunizieren mit hund, Christine Strauss"
 };
 
 export default function RootLayout({
@@ -26,11 +28,19 @@ export default function RootLayout({
   return (
     <html lang="de">
 
-    
-      <meta property="og:title" content="Team Hund-Mensch"/>
-      <meta property="og:descripion" content="Team Hund-Mensch bietet individuelles Coaching für ein harmonisches Hund-Mensch-Team. Angeboten werden Einzelcoachings. Artgerechte Kommunikation, Verständnis, Wertschätzung und Verbundenheit sind wichtige Begriffe auf dem Weg zu einem entspannten Team Hund-Mensch."/>
-      <meta property="og:image" content="/img/logo.svg"/>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description}/>
+        <meta name="keywords" content={metadata.keywords}/>
+
+        <meta property="og:title" content={metadata.title}/>
+        <meta property="og:description" content={metadata.description}/>
+        <meta property="og:image" content="/img/Logo.svg"/> 
+
+        <ClientMeta/>
+      </Head>
       
+
       <body className={montserrat.className}>
         {/* Navigation */}
         <Navbar />
@@ -50,11 +60,21 @@ export default function RootLayout({
               _url="/"
               _className="logo"
               _src="../img/Logo.svg"
-              _alt="logo"
+              _alt="Team Hund-Mensch"
               _height={90}
               _width={90}
             />
           </div>
+           <h4
+            className="col"
+            style={{
+              marginBottom: "0",
+              paddingTop: "1rem",
+              letterSpacing: "0.05rem",
+            }}
+          >
+           Christine Strauss
+          </h4>
           <div
             className="col"
             style={{

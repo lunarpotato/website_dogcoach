@@ -1,9 +1,23 @@
+
 /* eslint-disable jsx-a11y/alt-text */
-import Logo from "../components/Logo/Logo";
+import Head from "next/head";
+import ClientMeta from "../components/ClientMeta/ClientMeta";
 
 /* eslint-disable @next/next/no-img-element */
 export default function Leistungen() {
   return (
+  <>
+  <Head>
+    <title>Angebot</title>
+    <meta name="description" content="Artgerechte Kommunikation, Verständnis, Wertschätzung und Verbundenheit sind wichtige Begriffe auf dem Weg zu einem entspannten Team Hund-Mensch."/>
+  
+
+    <meta property="og:title" content="Angebot"/>
+    <meta property="og:description" content="Artgerechte Kommunikation, Verständnis, Wertschätzung und Verbundenheit sind wichtige Begriffe auf dem Weg zu einem entspannten Team Hund-Mensch."/>
+    <meta property="og:image" content="/img/spazieren_mit_see.jpg"/> 
+
+    <ClientMeta/>
+  </Head>
     <main>
       <div
         className="container container-custom"
@@ -43,6 +57,16 @@ export default function Leistungen() {
 
           <div className="col-lg-6 lg-gy-5">
             <div className="container" style={{ maxWidth: "900px" }}>
+
+{/* 
+              <Image
+              src="./img/spazieren_mit_see.jpg"
+              width={500}
+              height={500}
+              alt="Spazieren am See"
+              placeholder="blur"
+              loading="lazy"
+              blurDataURL="data:./img/spazieren_mit_see.jpg"/> */}
          
           
               
@@ -71,5 +95,7 @@ export default function Leistungen() {
         </div>
       </div>
     </main>
+    </>
+
   );
 }

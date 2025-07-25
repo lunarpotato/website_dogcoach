@@ -1,8 +1,24 @@
+import Head from "next/head";
 import Form from "../components/Form/KontaktForm";
+import ClientMeta from "../components/ClientMeta/ClientMeta";
 
 
 export default function Kontakt() {
   return (
+    <>
+     <Head>
+      <title>Kontakt</title>
+      <meta name="description" content="Tätig in Kreuzlingen und Umgebung. Für einen Termin schreiben Sie mir gerne via Kontakformular."/>
+    
+
+      <meta property="og:title" content="Kontakt"/>
+      <meta property="og:description" content="Tätig in Kreuzlingen und Umgebung. Für einen Termin schreiben Sie mir gerne via Kontakformular."/>
+      
+
+      <ClientMeta/>
+    </Head>
+  
+    <main>
     <div
       className="container container-custom"
       style={{
@@ -42,7 +58,7 @@ export default function Kontakt() {
                       style={{ color: "#2D4A00" }}
                     >
                      Tätig in Kreuzlingen und Umgebung. 
-                     Für einen Termin schreibe mir gerne via Kontakformular.
+                     Für einen Termin schreiben Sie mir gerne via Kontakformular.
                     </label>
                 </div>
                 <div className="col-sm-2">
@@ -91,5 +107,7 @@ export default function Kontakt() {
       
       </div>
     </div>
+    </main>
+    </>
   );
 }

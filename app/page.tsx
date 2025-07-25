@@ -4,9 +4,23 @@ import Image from "next/image";
 import dogHeaderimage from "../public/img/dogwithhuman.jpg";
 import Style from "./page.module.css";
 import ImageSlider from "./components/ImageSlider/ImageSlider";
+import Head from "next/head";
+import ClientMeta from "./components/ClientMeta/ClientMeta";
 
 export default function Home() {
   return (
+    <>
+     <Head>
+    <title>Startseite</title>
+    <meta name="description" content="Willkommen bei Team Hund-Mensch. Individuelles Coaching für ein harmonisches Hund-Mensch-Team."/>
+  
+
+    <meta property="og:title" content="Startseite"/>
+    <meta property="og:description" content="Willkommen bei Team Hund-Mensch. Individuelles Coaching für ein harmonisches Hund-Mensch-Team."/>
+    <meta property="og:image" content="/img/spazieren_mithunden.jpg"/> 
+
+    <ClientMeta/>
+  </Head>
     <main>
       <div className="container" style={{ padding: "0" }}>
         <div className="container position-relative">
@@ -19,7 +33,7 @@ export default function Home() {
               height: "clamp(150px, 50vh, 400px)",
               objectFit: "cover",
             }}
-            alt="Picture of a human and a dog"
+            alt="Team Mensch-Hund"
           />
 
           <div
@@ -64,5 +78,6 @@ export default function Home() {
         <ImageSlider />
       </div>
     </main>
+    </>
   );
 }

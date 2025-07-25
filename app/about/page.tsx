@@ -1,9 +1,23 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
+import Head from "next/head";
+
+import ClientMeta from "../components/ClientMeta/ClientMeta";
 
 export default function About() {
   return (
+    <>
+    <Head>
+      <title>Über mich</title>
+    
+    
+
+      <meta property="og:title" content="Über mich"/>
+
+      <meta property="og:image" content="/img/ein_anderes_selfie.jpg"/> 
+
+      <ClientMeta/>
+    </Head>
     <main>
       <div
         className="container container-custom overflow-hidden"
@@ -47,5 +61,6 @@ export default function About() {
         </div>
       </div>
     </main>
+    </>
   );
 }
