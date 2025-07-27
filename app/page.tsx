@@ -20,10 +20,6 @@ export default function Home() {
     <meta property="og:image" content="/img/spazieren_mithunden.jpg"/> 
 
     <ClientMeta/>
-
-    <link rel="preload" as="image" href="/img/sitzen_am_waldrand.jpg" />
-    <link rel="preload" as="image" href="/img/spazieren_mithunden.jpg" />
-    <link rel="preload" as="image" href="/img/sitzen_in_der_wiese.jpg" />
   </Head>
     <main>
       <div className="container" style={{ padding: "0" }}>
