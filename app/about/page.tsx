@@ -21,7 +21,7 @@ export default function About() {
     <main>
       <div
         className="container container-custom overflow-hidden"
-        style={{ marginTop: "2rem", marginBottom: "2rem" }}
+        style={{ marginTop: "2rem", marginBottom: "2rem", paddingBottom: "2rem", paddingTop: "1rem" }}
       >
         <div className="row featurette">
           <div className="col-lg-6">
@@ -46,7 +46,6 @@ export default function About() {
           <div className="col-lg-6 lg-gy-5">
             <img
               className="image"
-              loading="lazy"
               style={{
                 minHeight: "200px",
                 maxHeight: "600px",
@@ -55,7 +54,7 @@ export default function About() {
                 paddingBottom: "1rem",
                 paddingTop: "1rem",
               }}
-              src="./img/ein_anderes_selfie.jpg"
+              src="/img/ein_anderes_selfie.jpg"
             />
           </div>
         </div>

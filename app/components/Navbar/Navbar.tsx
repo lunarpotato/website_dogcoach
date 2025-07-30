@@ -28,7 +28,7 @@ export default function Navbar() {
                 <Logo
                   _url="/"
                   _className={Style["logo"]}
-                  _src="../img/Logo.svg"
+                  _src="/img/Logo.svg"
                   _alt="logo"
                 />
               </li>
@@ -63,7 +63,7 @@ export default function Navbar() {
                 <a href="https://www.google.com/maps/place/8280+Kreuzlingen/@47.6405613,9.1317982,13z/data=!3m1!4b1!4m6!3m5!1s0x479af72e3a0ca66d:0xf2bbe4623eb9d6f2!8m2!3d47.6447397!4d9.1707858!16zL20vMDN6cWI3?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"> 
                   <img 
                   height= "30em"
-                  src="../img/pin.png"
+                  src="/img/pin.png"
                   alt="Maps"/> </a> 
               </li>
           </div>

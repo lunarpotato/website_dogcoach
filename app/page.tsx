@@ -70,7 +70,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <img className={Style.printwalk} src="./img/printwalk.svg"></img>
+        <img className={Style.printwalk} src="/img/printwalk.svg"></img>
      
       </div>
 

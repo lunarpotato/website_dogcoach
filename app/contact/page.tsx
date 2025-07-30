@@ -65,8 +65,8 @@ export default function Kontakt() {
                           <div className="" style={{ paddingBottom: "2rem"}}>
                               <a href="https://www.google.com/maps/place/8280+Kreuzlingen/@47.6405613,9.1317982,13z/data=!3m1!4b1!4m6!3m5!1s0x479af72e3a0ca66d:0xf2bbe4623eb9d6f2!8m2!3d47.6447397!4d9.1707858!16zL20vMDN6cWI3?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"> 
                             <img 
-                                height= "100em"
-                                src="../img/pin.png"
+                                height= "80em"
+                                src="/img/pin.png"
                                 alt="Maps"/> </a> 
                           </div>
 
@@ -90,7 +90,7 @@ export default function Kontakt() {
                     <a href="mailto:teamhundmensch@gmail.com"> 
                       <img 
                           height= "50em"
-                          src="../img/mail.png"
+                          src="/img/mail.png"
                           alt="Mail"/> </a> 
                   </div>
                 </div>

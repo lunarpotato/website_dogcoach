@@ -72,7 +72,6 @@ export default function Leistungen() {
               
             <img
               className="image"
-              loading="lazy"
               aria-placeholder="blur"
               
               style={{
@@ -85,7 +84,7 @@ export default function Leistungen() {
                 
                
               }}
-              src="./img/spazieren_mit_see.jpg"
+              src="/img/spazieren_mit_see.jpg"
             />
             </div>
         

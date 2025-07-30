@@ -63,7 +63,7 @@ export default function RootLayout({
             <Logo
               _url="/"
               _className="logo"
-              _src="../img/Logo.svg"
+              _src="/img/Logo.svg"
               _alt="Team Hund-Mensch"
               _height={90}
               _width={90}
@@ -94,7 +94,7 @@ export default function RootLayout({
             <a href="mailto:teamhundmensch@gmail.com"> 
             <img 
                 height= "30em"
-                src="../img/mail.png"
+                src="/img/mail.png"
                 alt="Mail"/> </a> 
               </div>
           <div className="" style={{ paddingBottom: "2rem"}}>

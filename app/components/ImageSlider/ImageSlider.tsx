@@ -30,9 +30,8 @@ export default function ImageSlider() {
       <SwiperSlide>
         <div className={Styles.slideWrapper}>
           <img
-            src="../img/sitzen_am_waldrand.jpg"
+            src="/img/sitzen_am_waldrand.jpg"
             className={Styles.slideImage}
-            loading="lazy"
             onClick={() => router.push("/contact")}
           ></img>
           <p
@@ -46,8 +45,7 @@ export default function ImageSlider() {
       <SwiperSlide>
         <div className={Styles.slideWrapper}>
           <img
-            src="../img/spazieren_mithunden.jpg"
-            loading="lazy"
+            src="/img/spazieren_mithunden.jpg"
             className={Styles.slideImage}
             onClick={() => router.push("/contact")}
           ></img>
@@ -63,8 +61,7 @@ export default function ImageSlider() {
       <SwiperSlide>
         <div className={Styles.slideWrapper}>
           <img
-            src="../img/sitzen_in_der_wiese.jpg"
-            loading="lazy"
+            src="/img/sitzen_in_der_wiese.jpg"
             className={Styles.slideImage}
             onClick={() => router.push("/contact")}
           ></img>
