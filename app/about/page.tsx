@@ -32,13 +32,21 @@ export default function About() {
               className="lead lead-text"
               style={{ wordBreak: "break-word", letterSpacing: "0.05rem" }}
             >
-              Das Wesen Hund begleitet und begeistert mich von Kindheit an. Als
+              Das Wesen Hund begleitet und begeistert mich von Kindheit an. 
+               <br/>
+              Als
               ich an meiner ehemaligen Arbeitsstelle meinen Hund im Umgang mit
               beeinträchtigten und auch gesunden Menschen beobachtete, bekam ich
-              die Idee und den Wunsch dieses Thema zu vertiefen. Ich wollte mehr
+              die Idee und den Wunsch dieses Thema zu vertiefen. 
+              <br/>
+              <br/>
+              Ich wollte mehr
               erfahren über das Verhalten der Hunde, über die Beziehung
               Mensch-Hund und wie wir uns die Ressourcen von beiden Seiten
-              zunutze machen können. Ich lernte sehr viel über Kommunikation,
+              zunutze machen können. 
+              <br/>
+              <br/>
+              Ich lernte sehr viel über Kommunikation,
               über Wechselwirkungen und darüber, dass unser Begleiter Hund uns
               Menschen immer wohlgesonnen ist und uns unterstützen möchte.
             </p>

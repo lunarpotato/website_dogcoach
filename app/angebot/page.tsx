@@ -41,10 +41,16 @@ export default function Leistungen() {
               2021 habe ich bei Antonia Conzett in Steg im Tösstal die
               Coachingausbildung begonnen. Die Ausbildung ist abgeschlossen.
               Eine stete Weiterbildung und Austausch mit anderen Coaches
-              begleiten mich und halten mich auf dem neuesten Stand. Artgerechte
+              begleiten mich und halten mich auf dem neuesten Stand. 
+              <br/>
+              <br/>
+              Artgerechte
               Kommunikation, Verständnis, Wertschätzung und Verbundenheit sind
               wichtige Begriffe auf dem Weg zu einem entspannten Team
-              Hund-Mensch. Ich biete Einzelcoachings an, keine Gruppenstunden
+              Hund-Mensch. 
+              <br/>
+              <br/>
+              Ich biete Einzelcoachings an, keine Gruppenstunden
               oder Rudelspaziergänge.
             </p>
             <h4
