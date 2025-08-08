@@ -12,6 +12,16 @@ export async function POST(req: Request) {
       captchaToken,
     } = await req.json();
 
+
+console.log({
+  host: process.env.EMAIL_HOST,
+  port: process.env.EMAIL_PORT,
+  secure: process.env.EMAIL_SECURE,
+  user: process.env.EMAIL_USER,
+  pass: process.env.EMAIL_PASS ? "***" : "NOT SET",
+});
+
+
     // reCAPTCHA-Token wird geprüft.
     const secretKey = process.env.RECAPTCHA_SECRET_KEY;
     const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${captchaToken}`;
@@ -41,7 +51,7 @@ export async function POST(req: Request) {
     console.log("sendMail Prozess gestartet...");
 
     // E-Mail versenden
-    await transporter.sendMail({
+     await transporter.sendMail({
       from: `"Kontaktformular" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
       subject: "Neue Nachricht vom Kontaktformular",
