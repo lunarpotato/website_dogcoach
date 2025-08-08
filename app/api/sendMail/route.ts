@@ -25,7 +25,7 @@ export async function POST(req: Request) {
         { status: 400 }
       );
     }
-
+    console.log("baue Transporter zusammen")
     // Erstelle einen Nodemailer-Transporter
     const transporter = nodemailer.createTransport({
       host: process.env.EMAIL_HOST,
@@ -36,6 +36,9 @@ export async function POST(req: Request) {
         pass: process.env.EMAIL_PASS,
       },
     });
+    console.log("Transporter ist gebaut: ", {transporter});
+
+    console.log("sendMail Prozess gestartet...");
 
     // E-Mail versenden
     await transporter.sendMail({
@@ -44,6 +47,8 @@ export async function POST(req: Request) {
       subject: "Neue Nachricht vom Kontaktformular",
       text: `Name: ${firstName} ${lastName}\nEmail: ${email}\nTelefon: ${telefonNummer}\nNachricht: ${nachricht}`,
     });
+
+    console.log("sendMail Prozess beendet");
 
     return NextResponse.json(
       { message: "E-Mail erfolgreich gesendet!" },
