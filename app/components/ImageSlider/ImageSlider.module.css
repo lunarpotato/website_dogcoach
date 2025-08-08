@@ -73,6 +73,7 @@
     padding-bottom: 1rem;
     width: 80%;
     height: 20%;
+    font-size: 0.75rem;
  
     
   }
@@ -95,8 +96,8 @@
   }
 }
 
-/* @media (max-width: 387px) {
+ @media (max-width: 387px) {
   .slideText {
     font-size: 0.75rem;
   }
-} */
+} 
