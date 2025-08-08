@@ -46,6 +46,7 @@ console.log({
         pass: process.env.EMAIL_PASS,
       },
     });
+    await transporter.verify();
     console.log("Transporter ist gebaut: ", {transporter});
 
     console.log("sendMail Prozess gestartet...");
