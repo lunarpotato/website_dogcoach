@@ -73,7 +73,7 @@
     padding-bottom: 1rem;
     width: 80%;
     height: 15%;
-    font-size: 1rem;
+    font-size: 0.75rem;
     
   }
 }
@@ -89,7 +89,7 @@
   .slideText {
     position: relative;
     height: 15%;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
 
 
   }
